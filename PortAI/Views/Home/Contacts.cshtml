@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewData["Title"] = "Contacts";
+}
+
+<h1>Contacts</h1>
+<h2></h2>
+<table>
+    <tbody>
+        <tr>
+            <td colspan="2"><p class="h3 mt-5 mb-4 text-uppercase">Aleksey Burov</p></td>
+            <td><p> </p></td>
+        </tr>
+        <tr>
+            <td><p class="h5 text-uppercase pr-5 mb-2">Programmer</p></td>
+            <td><p class="text-muted h5">C#, WPF, Core, Unity3D, Android Studio</p></td>
+        </tr>
+        <tr>
+            <td><p class="h5 text-uppercase mb-2">Mail:</p></td>
+            <td>
+                <button type="button" class="btn btn-secondary buttonShowMail">Show mail</button><p class="h5 labelMail"></p>
+                <span hidden class="hiddenPart2">Programmer</span>
+                <span hidden class="hiddenPart3">@@gmail.com</span>
+                <span hidden class="hiddenPart1">BurovAlex</span>
+            </td>
+        </tr>
+        <tr>
+            <td><p class="h5 text-uppercase mb-2">Phone:</p></td>
+            <td>
+                <button type="button" class="btn btn-secondary buttonShowPhone">Show phone</button><p class="h5 labelPhone"></p>
+                <span hidden class="hiddenPart2">12 906</span>
+                <span hidden class="hiddenPart3">-32-42</span>
+                <span hidden class="hiddenPart1">+7 9</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><p class="h3 mt-5 mb-4 text-uppercase">Merkulenko Ilya</p></td>
+            <td><p> </p></td>
+        </tr>
+        <tr>
+            <td><p class="h5 text-uppercase pr-5 mb-2">Programmer</p></td>
+            <td><p class="text-muted h5">C#, Core, JavaScript, Swift</p></td>
+        </tr>
+        <tr>
+            <td><p class="h5 text-uppercase mb-2">Mail:</p></td>
+            <td>
+                <button type="button" class="btn btn-secondary buttonShowMail">Show mail</button><p class="h5 labelMail"></p>
+                <span hidden class="hiddenPart2">asgdsgad</span>
+                <span hidden class="hiddenPart3">@@gmail.com</span>
+                <span hidden class="hiddenPart1">dagsd</span>
+            </td>
+        </tr>
+        <tr>
+            <td><p class="h5 text-uppercase mb-2">Phone:</p></td>
+            <td>
+                <button type="button" class="btn btn-secondary buttonShowPhone">Show phone</button><p class="h5 labelPhone"></p>
+                <span hidden class="hiddenPart2">222</span>
+                <span hidden class="hiddenPart3">333</span>
+                <span hidden class="hiddenPart1">111</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    $(function () {
+        $("#navItemContacts").addClass("active");
+
+        $(".buttonShowMail").click(function () {
+            var td = $(this).parent();
+            var part1 = td.find(".hiddenPart1").html();
+            var part2 = td.find(".hiddenPart2").html();
+            var part3 = td.find(".hiddenPart3").html();
+            td.html("<p class='h5 text-success'>" + part1 + part2 + part3 + "</p>");
+        });
+
+        $(".buttonShowPhone").click(function () {
+            var td = $(this).parent();
+            var part1 = td.find(".hiddenPart1").html();
+            var part2 = td.find(".hiddenPart2").html();
+            var part3 = td.find(".hiddenPart3").html();
+            td.html("<p class='h5 text-success'>" + part1 + part2 + part3 + "</p>");
+        });
+    });
+</script>
