@@ -1,9 +1,143 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Home";
     Layout = "~/Views/Shared/_LayoutRestAPI.cshtml";
+    string currentYear = DateTime.Now.Year.ToString();
 }
 
-<h1>Home</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-132
+<div class="row">
+    <h1 class="pl-5">Movie search</h1>
+</div>
+<form method="post">
+    <div class="row mt-4">
+        <div class="col-3">
+            <div class="form-group">
+                <input type="button" class="btn btn-block btn-danger" value="Test" onclick="Test();" />
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-block btn-primary" id="startSearchButton" value="Start search" />
+            </div>
+
+            <div class="form-group">
+                <label for="searchText" style="display:none;">Search</label>
+
+                @Html.TextBox("searchText", "", htmlAttributes: new { @type = "search", @class = "form-control", @placeholder = "Keywords" })
+            </div>
+
+            <div class="form-group">
+                <div class="custom-control custom-switch">
+
+                    @Html.CheckBox("showAdvanceSearchToggle", false, htmlAttributes: new { @class = "custom-control-input", @onchange = "SwitchDisplayAdvanceSearchPanel();" })
+                    <label class="custom-control-label" for="showAdvanceSearchToggle">Advanced</label>
+                </div>
+            </div>
+
+            <div id="leftExtendedPanel" style="display:none">
+                <div class="form-group">
+                    <label for="genreSelect">Genre</label>
+                    @Html.DropDownList("genreSelect", new SelectList(""), htmlAttributes: new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <label for="yearsInputGroup">Years</label>
+                    <div class="input-group" id="yearsInputGroup">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Years</span>
+                        </div>
+                        @Html.Editor("yearBegin", new { htmlAttributes = new { @class = "form-control", @type = "number", @min = "1895", @max = currentYear, @step = "1" } })
+                        @Html.Editor("yearEnd", new { htmlAttributes = new { @class = "form-control", @type = "number", @min = "1895", @max = currentYear, @step = "1" } })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">iMDB rating (no less then)</label>
+                    @Html.DropDownList("exampleSelect2", new SelectList(new string[] { "Any", "3", "4", "5", "6", "7", "8" }), htmlAttributes: new { @class = "form-control" })
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</form>
+<div class="row">
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Установка языка
+
+        //Получение списка жанров
+        getGenresList();  
+    });
+
+    //Переключение отображения панели расширенного поиска
+    function SwitchDisplayAdvanceSearchPanel() {
+        $('#leftExtendedPanel').stop();
+        var checked = $('#showAdvanceSearchToggle').prop('checked');
+        if (checked) {
+            $('#leftExtendedPanel').slideDown(300);
+        } else {
+            $('#leftExtendedPanel').slideUp(300);
+        }
+    }
+
+    function testJson() {
+        alert("testJson");
+
+        $.ajax({
+            type: "POST",
+            url: "/RestAPI/GetFilmCount",
+            data: "{data : testVal}",
+            success: function (data) {
+                alert(data);
+            }
+        });
+
+
+    }
+
+    function testJson2() {
+        alert("testJson2");
+
+        $.ajax({
+            type: "POST",
+            url: "/RestAPI/GetFilmCount",
+            data: "{data : testVal}",
+            success: function (data) {
+                alert(data);
+            }
+        });
+    }
+
+    //Получение списка жанров
+    function getGenresList() {
+        $.ajax({
+            type: "POST",
+            url: "/RestAPI/GetGenres",
+            data: "{data : testVal}",
+            success: function (data) {
+                $("#genreSelect").html(""); //clean select
+                $("#genreSelect").append($("<option></option>").attr("value", 0).text(""))
+                $(data).each(function () {
+                    $("#genreSelect").append($("<option></option>").attr("value", this.id).text(this.name));
+                });
+            }
+        });
+    }
+</script>
+
+<style>
+    option, select {
+        text-transform: capitalize;
+    }
+</style>
+
+
+<script src="~/js/restApiHome.js">
+
+
+</script>
