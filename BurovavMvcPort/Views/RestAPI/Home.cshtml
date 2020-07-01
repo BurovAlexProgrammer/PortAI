@@ -7,45 +7,45 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <div class="row">
-    <h1 class="pl-5">Movie search</h1>
+    <h1 class="pl-5">@Resources.Resource.MovieSearch</h1>
 </div>
 <form method="post">
     <div class="row mt-4">
         <div class="col-3">
-            <div class="form-group">
+            <div class="form-group" style="display:none">
                 <input type="button" class="btn btn-block btn-danger" value="Test" onclick="Test();" />
             </div>
 
 
             <div class="form-group">
-                <input type="submit" class="btn btn-block btn-primary" id="startSearchButton" value="Start search" />
+                <input type="button" class="btn btn-block btn-primary" id="startSearchButton" value=@Resources.Resource.StartSearch onclick="StarSearch()"/>
             </div>
 
             <div class="form-group">
                 <label for="searchText" style="display:none;">Search</label>
 
-                @Html.TextBox("searchText", "", htmlAttributes: new { @type = "search", @class = "form-control", @placeholder = "Keywords" })
+                @Html.TextBox("searchText", "", htmlAttributes: new { @type = "search", @class = "form-control", @placeholder = Resources.Resource.Keywords })
             </div>
 
             <div class="form-group">
                 <div class="custom-control custom-switch">
 
                     @Html.CheckBox("showAdvanceSearchToggle", false, htmlAttributes: new { @class = "custom-control-input", @onchange = "SwitchDisplayAdvanceSearchPanel();" })
-                    <label class="custom-control-label" for="showAdvanceSearchToggle">Advanced</label>
+                    <label class="custom-control-label" for="showAdvanceSearchToggle">@Resources.Resource.Advanced</label>
                 </div>
             </div>
 
             <div id="leftExtendedPanel" style="display:none">
                 <div class="form-group">
-                    <label for="genreSelect">Genre</label>
+                    <label for="genreSelect">@Resources.Resource.Genre</label>
                     @Html.DropDownList("genreSelect", new SelectList(""), htmlAttributes: new { @class = "form-control" })
                 </div>
 
                 <div class="form-group">
-                    <label for="yearsInputGroup">Years</label>
+                    <label for="yearsInputGroup">@Resources.Resource.ReleaseDate</label>
                     <div class="input-group" id="yearsInputGroup">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="">Years</span>
+                            <span class="input-group-text" id="">@Resources.Resource.Years</span>
                         </div>
                         @Html.Editor("yearBegin", new { htmlAttributes = new { @class = "form-control", @type = "number", @min = "1895", @max = currentYear, @step = "1" } })
                         @Html.Editor("yearEnd", new { htmlAttributes = new { @class = "form-control", @type = "number", @min = "1895", @max = currentYear, @step = "1" } })
@@ -53,8 +53,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="rating">iMDB rating (no less then)</label>
-                    @Html.DropDownList("exampleSelect2", new SelectList(new string[] { "Any", "3", "4", "5", "6", "7", "8" }), htmlAttributes: new { @class = "form-control" })
+                    <label for="rating">@Resources.Resource.IMDBRating</label>
+                    @Html.DropDownList("exampleSelect2", new SelectList(new string[] { Resources.Resource.Any, "3", "4", "5", "6", "7", "8" }), htmlAttributes: new { @class = "form-control" })
                 </div>
             </div>
 
@@ -71,7 +71,7 @@
         //Установка языка
 
         //Получение списка жанров
-        getGenresList();  
+        getGenresList();
     });
 
     //Переключение отображения панели расширенного поиска
@@ -100,15 +100,16 @@
 
     }
 
-    function testJson2() {
-        alert("testJson2");
-
+    function StarSearch() {
+        var q = "Fury";
+        var y = "2019";
         $.ajax({
             type: "POST",
-            url: "/RestAPI/GetFilmCount",
-            data: "{data : testVal}",
+            url: "/RestAPI/StarSearch",
+            data: { query: q, year: y },
             success: function (data) {
-                alert(data);
+                alert("total_results: " + data.total_results);
+                alert("total_pages: " + data.total_pages);
             }
         });
     }
@@ -128,6 +129,8 @@
             }
         });
     }
+
+    //Получение количества фильмов
 </script>
 
 <style>

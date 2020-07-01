@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortAI", "PortAI\PortAI.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BurovavMvcPort", "BurovavMvcPort\BurovavMvcPort.csproj", "{8C01621C-C3FB-44AC-97B4-D55EE701B4E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaxhetMvc", "RaxhetMvc\RaxhetMvc.csproj", "{610DADE5-396A-4260-A42C-6D6C1A0B0797}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaxhetMvc", "RaxhetMvc\RaxhetMvc.csproj", "{610DADE5-396A-4260-A42C-6D6C1A0B0797}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +32,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_PrefixTranslations = False
+		RESX_NeutralResourcesLanguage = en-US
 		SolutionGuid = {A930CFE3-8138-4737-97E7-6CE22AD955F9}
 	EndGlobalSection
 EndGlobal

@@ -14,6 +14,7 @@ using BurovavMvcPort.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using BurovavMvcPort.Services;
+using Microsoft.AspNetCore.Routing;
 
 namespace BurovavMvcPort {
     public class Startup {
@@ -40,6 +41,7 @@ namespace BurovavMvcPort {
 
             services.AddMvc();
             services.AddTransient<ILanguageService, LanguageService>();
+            services.AddLocalization();
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2); Было так, попробую удалить для публикации
         }
 
@@ -54,18 +56,43 @@ namespace BurovavMvcPort {
                 app.UseHsts();
             }
 
+            //On error 404
+            app.Use(async (context, next) => {
+                await next();
+                if (context.Response.StatusCode == 404)
+                {
+                    context.Request.Path = "/Home/NotFound";
+                    await next();
+                }
+            });
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            
             app.UseAuthentication();
 
             app.UseMiddleware<LanguageMiddleware>();
 
-            app.UseMvc(routes => {
+            //var routeBuilder = new RouteBuilder(app);
+            //routeBuilder.MapRoute("{language}/{controller}/{action}/{*catchall}", async context =>
+            //{
+            //    var s1 = context.GetRouteValue("language");
+            //    var s2 = context.GetRouteValue("controller");
+            //    var s3 = context.GetRouteValue("action");
+            //    var s4 = context.GetRouteValue("catchall");
+            //    context.Response.ContentType = "text/html; charset=utf-8";
+            //    await context.Response.WriteAsync("<h1>Определен маршрут как {language}/{controller}/{action}/{*catchall}</h1>");
+            //});
+
+            //app.UseRouter(routeBuilder.Build());
+
+            app.UseMvc(routes =>
+            {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
             });
 
         }

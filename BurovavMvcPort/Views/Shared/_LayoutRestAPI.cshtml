@@ -48,12 +48,21 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item" id="navItemHome">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">@Resources.Resource.Home</a>
                         </li>
                         <li class="nav-item" id="navItemPortfolio">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Portfolio">Portfolio</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Portfolio">@Resources.Resource.Portfolio</a>
                         </li>
                     </ul>
+                </div>
+                <div>
+                    @{
+                        var languageService = new BurovavMvcPort.Services.LanguageService();
+                        var currentLanguage = languageService.GetCurrentLanguage(Context);
+                        var languageList = BurovavMvcPort.Services.LanguageService.Languages;
+                    }
+                    @Html.Hidden("currentLanguage", currentLanguage)
+                    @Html.DropDownList("languageSelect", new SelectList(languageList.Select(l => new { l.name, l.title }), "name", "title"), htmlAttributes: new { @class = "form-control", @onchange = "testJson3();" })
                 </div>
             </div>
         </nav>
@@ -94,6 +103,38 @@
     -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var currentLanguage = $("#currentLanguage").val();
+            if (currentLanguage) {
+                SelectOptionByValue("currentLanguage",currentLanguage);
+                //alert("set " + currentLanguage);
+            } else {
+                $("#currentLanguage").prop("selectedIndex", 0);
+                //alert("set 0");
+            }
+        });
+
+        function testJson3() {
+            $.ajax({
+                type: "POST",
+                url: "/App/SetLanguage/" + $("#languageSelect").val(),
+                success: function (data) {
+                    console.log("Ajax success. Data: " + data);
+                    location.reload();
+                },
+                error: function (jqXHR, exception) {
+                    console.log("Ajax error: Status=" + jqXHR.status + ", Exception='" + exception + "'");
+                }
+            });
+        }
+
+        function SelectOptionByValue(documentId, value) {
+            $("#languageSelect").val(value);
+           // alert($("#" + documentId).prop("selectedIndex"));
+        }
+    </script>
 
     @RenderSection("Scripts", required: false)
 </body>
