@@ -153,4 +153,28 @@
   <data name="StartSearch" xml:space="preserve">
     <value>Начать поиск</value>
   </data>
+  <data name="Year" xml:space="preserve">
+    <value>Год</value>
+  </data>
+  <data name="SortingLabel" xml:space="preserve">
+    <value>Сортировка</value>
+  </data>
+  <data name="PopularityDesc" xml:space="preserve">
+    <value>Популярность (по убыванию)</value>
+  </data>
+  <data name="PopularityAsc" xml:space="preserve">
+    <value>Популярность (по возрастанию)</value>
+  </data>
+  <data name="DateDesc" xml:space="preserve">
+    <value>Дата (по убыванию)</value>
+  </data>
+  <data name="DateAsc" xml:space="preserve">
+    <value>Дата (по возрастанию)</value>
+  </data>
+  <data name="NameDesc" xml:space="preserve">
+    <value>Имя (по убыванию)</value>
+  </data>
+  <data name="NameAsc" xml:space="preserve">
+    <value>Имя (по возрастанию)</value>
+  </data>
 </root>

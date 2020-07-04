@@ -18,13 +18,27 @@
 
 
             <div class="form-group">
-                <input type="button" class="btn btn-block btn-primary" id="startSearchButton" value=@Resources.Resource.StartSearch onclick="StarSearch()"/>
+                <input type="button" class="btn btn-block btn-primary" id="startSearchButton" value=@Resources.Resource.StartSearch onclick="StarSearch()" />
             </div>
 
             <div class="form-group">
                 <label for="searchText" style="display:none;">Search</label>
 
                 @Html.TextBox("searchText", "", htmlAttributes: new { @type = "search", @class = "form-control", @placeholder = Resources.Resource.Keywords })
+            </div>
+
+            <div class="form-group">
+                <label for="sortingText">@Resources.Resource.SortingLabel</label>
+                <select class="form-control" id="sortingSelect" name="genreSelect">
+                    <option value="popularDesc">@Resources.Resource.PopularityDesc</option>
+                    <option value="popularAsc">@Resources.Resource.PopularityAsc</option>
+                    <option value="dateDesc">@Resources.Resource.DateDesc</option>
+                    <option value="dateAsc">@Resources.Resource.DateAsc</option>
+                    <option value="nameDesc">@Resources.Resource.NameDesc</option>
+                    <option value="nameAsc">@Resources.Resource.NameAsc</option>
+                </select>
+
+
             </div>
 
             <div class="form-group">
@@ -42,13 +56,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="yearsInputGroup">@Resources.Resource.ReleaseDate</label>
+                    <label for="yearInputGroup">@Resources.Resource.ReleaseDate</label>
                     <div class="input-group" id="yearsInputGroup">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="">@Resources.Resource.Years</span>
+                            <span class="input-group-text" id="">@Resources.Resource.Year</span>
                         </div>
-                        @Html.Editor("yearBegin", new { htmlAttributes = new { @class = "form-control", @type = "number", @min = "1895", @max = currentYear, @step = "1" } })
-                        @Html.Editor("yearEnd", new { htmlAttributes = new { @class = "form-control", @type = "number", @min = "1895", @max = currentYear, @step = "1" } })
+                        @Html.Editor("year", new { htmlAttributes = new { @class = "form-control", @type = "number", @min = "1895", @max = currentYear, @step = "1" } })
                     </div>
                 </div>
 
@@ -56,14 +69,44 @@
                     <label for="rating">@Resources.Resource.IMDBRating</label>
                     @Html.DropDownList("exampleSelect2", new SelectList(new string[] { Resources.Resource.Any, "3", "4", "5", "6", "7", "8" }), htmlAttributes: new { @class = "form-control" })
                 </div>
+
             </div>
 
         </div>
+        <div class="col-9">
+            <div id="resultContainer" class="row">
+                <div id="dd" class="card btn-block btn-primary bg-dark col-auto m-1 p-o" style="width: 16rem;">
+                    <a href="#" class="btn btn-dark mt-3 mb-3 p-0">
+                        <img class="card-img-top model_poster_path" src="~/img/movie_dark7.png" alt="">
+                    </a>
+                    <div class="card-body p-1">
+                        <h5 class="card-title model_title">Card title</h5>
+                        <p class="card-text model_overview m-0 p-0">Some quick ex asdkfj hasdk fjasdg kjasdh ksahd glkashd lample text to build on the card title and make up the bulk of the card's content.</p>
 
-    </div>
+                    </div>
+                    <label id="templateCard_title" class="hidden"></label>
+                    <label id="templateCard_id" class="hidden"></label>
+                </div>
+            </div>
+            <div>
+                <div id="templateCard" class="card btn-block btn-primary bg-dark col-auto m-1 p-o" style="width: 16rem;">
+                    <a href="#" class="btn btn-dark mt-3 mb-3 p-0">
+                        <img class="card-img-top model_poster_path" src="~/img/movie_dark7.png" alt="">
+                    </a>
+                    <div class="card-body p-1">
+                        <h5 class="card-title model_title">Card title</h5>
+                        <p class="card-text model_overview m-0 p-0">Some quick ex asdkfj hasdk fjasdg kjasdh ksahd glkashd lample text to build on the card title and make up the bulk of the card's content.</p>
+
+                    </div>
+                    <label id="templateCard_title" class="hidden"></label>
+                    <label id="templateCard_id" class="hidden"></label>
+                </div>
+            </div>
+        </div>
+     </div>
 </form>
 <div class="row">
-
+    
 </div>
 
 <script type="text/javascript">
@@ -72,6 +115,9 @@
 
         //Получение списка жанров
         getGenresList();
+
+        var dd = $("#dd");
+        dd.find(".model_title").html("sdfgsdg");
     });
 
     //Переключение отображения панели расширенного поиска
@@ -96,20 +142,26 @@
                 alert(data);
             }
         });
-
-
     }
 
     function StarSearch() {
-        var q = "Fury";
-        var y = "2019";
+        var q = $("#searchText").val();
+        var y = $("#year").val();
+        var s = $("#sortingSelect").val();
+        $("#resultContainer").html("");
         $.ajax({
             type: "POST",
             url: "/RestAPI/StarSearch",
-            data: { query: q, year: y },
+            data: { query: q, year: y, sort: s },
             success: function (data) {
-                alert("total_results: " + data.total_results);
-                alert("total_pages: " + data.total_pages);
+                $(data).each(function () {
+                    var newCard = $("#templateCard").clone();
+                    newCard.show();
+                    newCard.find(".model_title").html(this.title);
+                    newCard.find(".model_overview").html(this.overview);
+                    newCard.find(".model_year").html(this.);
+                    $("#resultContainer").append(newCard);
+                });
             }
         });
     }
@@ -122,7 +174,7 @@
             data: "{data : testVal}",
             success: function (data) {
                 $("#genreSelect").html(""); //clean select
-                $("#genreSelect").append($("<option></option>").attr("value", 0).text(""))
+                $("#genreSelect").append($("<option></option>").attr("value", 0).text(""));
                 $(data).each(function () {
                     $("#genreSelect").append($("<option></option>").attr("value", this.id).text(this.name));
                 });

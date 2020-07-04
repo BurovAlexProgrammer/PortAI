@@ -79,6 +79,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date (ascending).
+        /// </summary>
+        public static string DateAsc {
+            get {
+                return ResourceManager.GetString("DateAsc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date (descending).
+        /// </summary>
+        public static string DateDesc {
+            get {
+                return ResourceManager.GetString("DateDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Genre.
         /// </summary>
         public static string Genre {
@@ -133,6 +151,42 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name (ascending).
+        /// </summary>
+        public static string NameAsc {
+            get {
+                return ResourceManager.GetString("NameAsc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name (descending).
+        /// </summary>
+        public static string NameDesc {
+            get {
+                return ResourceManager.GetString("NameDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Popularity (ascending).
+        /// </summary>
+        public static string PopularityAsc {
+            get {
+                return ResourceManager.GetString("PopularityAsc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Popularity (descending).
+        /// </summary>
+        public static string PopularityDesc {
+            get {
+                return ResourceManager.GetString("PopularityDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Portfolio.
         /// </summary>
         public static string Portfolio {
@@ -151,11 +205,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorting.
+        /// </summary>
+        public static string SortingLabel {
+            get {
+                return ResourceManager.GetString("SortingLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start search.
         /// </summary>
         public static string StartSearch {
             get {
                 return ResourceManager.GetString("StartSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
             }
         }
         

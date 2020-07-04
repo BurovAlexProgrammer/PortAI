@@ -17,11 +17,6 @@
 
 
   <ItemGroup>
-    <Folder Include="Models\RestAPI\" />
-  </ItemGroup>
-
-
-  <ItemGroup>
     <Compile Update="Data\RestAPI\Resources\Resource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -31,14 +26,6 @@
 
 
   <ItemGroup>
-    <EmbeddedResource Update="Data\RestAPI\Resources\Resource.de.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>Resources</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Data\RestAPI\Resources\Resource.fi.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>Resource</CustomToolNamespace>
-    </EmbeddedResource>
     <EmbeddedResource Update="Data\RestAPI\Resources\Resource.resx">
       <CustomToolNamespace>Resources</CustomToolNamespace>
       <Generator>PublicResXFileCodeGenerator</Generator>
