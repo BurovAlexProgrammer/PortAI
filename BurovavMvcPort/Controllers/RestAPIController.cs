@@ -21,8 +21,6 @@ namespace BurovavMvcPort.Controllers
         public IActionResult Index()
         {
             return View();
-
-            
         }
 
     
@@ -31,20 +29,6 @@ namespace BurovavMvcPort.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public IActionResult Home(string searchText, bool showAdvanceSearchToggle, string exampleSelect1, int yearBegin, int yearEnd, string exampleSelect2)
-        //{
-        //    if (searchText == null)
-        //    {
-        //        //Don't search
-        //    }
-        //    return View();
-        //}
-
-        public JsonResult GetFilmCount(string val)
-        {
-            return Json("Good!! val:"+val);
-        }
 
         public JsonResult StarSearch(string query, int? year, string sort)
         {
@@ -77,7 +61,6 @@ namespace BurovavMvcPort.Controllers
                         jsonAnswer = JObject.Parse(response);
                         //var j1 = jsonAnswer["results"];
                         var r1 = jsonAnswer.SelectToken("results").First;
-                        //var r2 = JsonConvert.DeserializeObject<Film>(j1?.ToString());
                         var results = jsonAnswer.SelectToken("results")?.Select(r => r.ToObject<Film>())?.ToList();
                         lock (result)
                         {
@@ -111,7 +94,6 @@ namespace BurovavMvcPort.Controllers
             }
             return Json(result);
         }
-
 
         //Получить список жанров
         public JsonResult GetGenres()

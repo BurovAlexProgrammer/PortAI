@@ -34,13 +34,20 @@ namespace BurovavMvcPort.Services
                 new Language(3, "De", "Deutsche", "de-DE"),
                 new Language(4, "Fi", "Suomalainen", "fi-FI")
             };
+        public static readonly Language defaultLanguage = Languages.First();
         Language currentLanguage;
 
         public string GetCurrentLanguage(HttpContext context)
         {
+
             if (context.Request.Cookies.ContainsKey(CookieKeys.LANGUAGE))
             {
-                return context.Request.Cookies[CookieKeys.LANGUAGE];
+                var languageCookie = context.Request.Cookies[CookieKeys.LANGUAGE];
+
+                if (Languages.Where(l => l.culture == languageCookie).Any())
+                    return languageCookie;
+                else 
+                    return defaultLanguage.culture;
             }
             else
             {
@@ -53,10 +60,10 @@ namespace BurovavMvcPort.Services
         /// </summary>
         public bool SetCurrentLanguage(HttpContext context, string lang)
         {
-            if (Languages.Any(l => l.name == lang))
+            if (Languages.Any(l => l.culture == lang))
             {
                 context.Response.Cookies.Append(CookieKeys.LANGUAGE, lang);
-                currentLanguage = Languages.First(l => l.name == lang);
+                currentLanguage = Languages.First(l => l.culture == lang);
                 SetUI(context);
                 return true;
             }
@@ -68,7 +75,7 @@ namespace BurovavMvcPort.Services
         {
             var cookieLanguage = GetCurrentLanguage(context);
             if  (cookieLanguage == null) 
-                SetCurrentLanguage(context, Languages.First().name);
+                SetCurrentLanguage(context, Languages.First().culture);
             else
                 SetCurrentLanguage(context, cookieLanguage);
             SetUI(context);

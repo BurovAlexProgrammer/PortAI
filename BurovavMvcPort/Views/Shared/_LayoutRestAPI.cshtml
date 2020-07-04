@@ -62,7 +62,7 @@
                         var languageList = BurovavMvcPort.Services.LanguageService.Languages;
                     }
                     @Html.Hidden("currentLanguage", currentLanguage)
-                    @Html.DropDownList("languageSelect", new SelectList(languageList.Select(l => new { l.name, l.title }), "name", "title"), htmlAttributes: new { @class = "form-control", @onchange = "testJson3();" })
+                    @Html.DropDownList("languageSelect", new SelectList(languageList.Select(l => new { l.culture, l.title }), "culture", "title"), htmlAttributes: new { @class = "form-control", @onchange = "ChangeLanguage();" })
                 </div>
             </div>
         </nav>
@@ -116,7 +116,7 @@
             }
         });
 
-        function testJson3() {
+        function ChangeLanguage() {
             $.ajax({
                 type: "POST",
                 url: "/App/SetLanguage/" + $("#languageSelect").val(),

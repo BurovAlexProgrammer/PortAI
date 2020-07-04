@@ -15,8 +15,11 @@ namespace BurovavMvcPort.Models.RestAPI
         public string original_language { get; set; }
         public string title { get; set; }
         public int[] genre_ids { get; set; }
-        public DateTime? release_date { get { return release_date; } set { release_date = value; } }
-        public int? year { get { if (release_date == null) return null; return ((DateTime)release_date).Year; } }
+        DateTime? _release_date { get; set; }
+        public DateTime? release_date { get { return _release_date; } set { _release_date = value; } }
+        int? _year;
+        public int? year { get { return release_date?.Year; } }
+        public string overview { get; set; }
     }
 
     public interface IFilm
@@ -30,5 +33,6 @@ namespace BurovavMvcPort.Models.RestAPI
         int[] genre_ids { get; set; }
         DateTime? release_date { get; set; }
         int? year { get; }
+        string overview { get; set; }
     }
 }
