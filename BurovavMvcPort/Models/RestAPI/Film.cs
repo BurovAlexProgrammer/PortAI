@@ -15,7 +15,7 @@ namespace BurovavMvcPort.Models.RestAPI
         public string original_language { get; set; }
         public string title { get; set; }
         public int[] genre_ids { get; set; }
-        public DateTime? release_date { get; set; }
+        public DateTime? release_date { get { return release_date; } set { release_date = value; } }
         public int? year { get { if (release_date == null) return null; return ((DateTime)release_date).Year; } }
     }
 

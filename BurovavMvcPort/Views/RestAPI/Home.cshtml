@@ -81,6 +81,7 @@
                     </a>
                     <div class="card-body p-1">
                         <h5 class="card-title model_title">Card title</h5>
+                        <label class="text-secondary model_year">year</label>
                         <p class="card-text model_overview m-0 p-0">Some quick ex asdkfj hasdk fjasdg kjasdh ksahd glkashd lample text to build on the card title and make up the bulk of the card's content.</p>
 
                     </div>
@@ -159,7 +160,7 @@
                     newCard.show();
                     newCard.find(".model_title").html(this.title);
                     newCard.find(".model_overview").html(this.overview);
-                    newCard.find(".model_year").html(this.);
+                    newCard.find(".model_year").html(this.year);
                     $("#resultContainer").append(newCard);
                 });
             }
