@@ -67,7 +67,7 @@
 
                 <div class="form-group">
                     <label for="rating">@Resources.Resource.IMDBRating</label>
-                    @Html.DropDownList("exampleSelect2", new SelectList(new string[] { Resources.Resource.Any, "3", "4", "5", "6", "7", "8" }), htmlAttributes: new { @class = "form-control" })
+                    @Html.DropDownList("voteSelect", new SelectList(new string[] { Resources.Resource.Any, "3", "4", "5", "6", "7", "8" }), htmlAttributes: new { @class = "form-control" })
                 </div>
 
             </div>
@@ -77,9 +77,13 @@
             <div id="resultContainer" class="row">
 
             </div>
-            <div>
+            <div id="messagePanel">
+                <label id="messageLabel" class="h1"></label>
+                <label id="advancedMessageLabel" class="h3"></label>
+            </div>
+            <div id="hiddenContainer" style="visibility:collapse;">
                 <div id="templateCard" class="card btn-block btn-primary bg-dark col-auto m-1 p-o" style="width: 16rem;">
-                    <a href="#" class="btn btn-dark mt-3 mb-3 p-0">
+                    <a href="#" class="model_link_more btn btn-dark mt-3 mb-3 p-0">
                         <img class="card-img-top model_poster_path" src="~/img/movie_dark8.png" alt="">
                     </a>
                     <div class="card-body p-1">
@@ -101,11 +105,30 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        //Установка языка
-
         //Получение списка жанров
         getGenresList();
+
+        ShowMessagePanel();
+        SetMessage('@Resources.Resource.BeginSearch');
+
+        //Блокировка кнопки при пустом поле поиска
+        $('#searchText').keyup(function () {
+            if ($(this).val() == '') {
+                Disable('#startSearchButton');
+            } else {
+                Enable('#startSearchButton');
+            }
+        });
+        $('#searchText').keyup();
     });
+
+    function Disable(el) {
+        $('#startSearchButton').prop('disabled', true);
+    }
+
+    function Enable(el) {
+        $('#startSearchButton').prop('disabled', false);
+    }
 
     //Переключение отображения панели расширенного поиска
     function SwitchDisplayAdvanceSearchPanel() {
@@ -119,33 +142,36 @@
     }
 
     function StarSearch() {
-        var q = $("#searchText").val();
-        var y = $("#year").val();
-        var s = $("#sortingSelect").val();
+        WaitLoading(true);
+        var query = $("#searchText").val();
+        var year = $("#year").val();
+        var sort = $("#sortingSelect").val();
+        var genreId = $("#genreSelect").val();
+        var vote = $("#voteSelect").val();
         $("#resultContainer").html("");
         $.ajax({
             type: "POST",
             url: "/RestAPI/StarSearch",
-            data: { query: q, year: y, sort: s },
+            data: { query: query, year: year, sort: sort, genreId: genreId, vote: vote },
             success: function (data) {
                 $(data).each(function () {
-                    var newCard = $("#templateCard").clone();
-                    newCard.prop("visibility", "block");
+                    var newCard = $("#templateCard").clone().prop("id","templateCard"+this.id);
                     newCard.removeProp("id");
                     newCard.find(".model_title").html(this.title);
                     newCard.find(".model_overview").html(this.overview);
                     newCard.find(".model_year").html(this.year);
-                    newCard.find(".model_overview").html(this.overview.slice(0,120)+"..");
-                    newCard.find(".model_link_more").prop("href", this.id); //TODO описать линку для просмотра информации о фильме
+                    newCard.find(".model_overview").html(this.overview.slice(0, 120) + "..");
+                    newCard.find(".model_link_more").prop("href", "/restapi/Film/"+this.id); //TODO описать линку для просмотра информации о фильме
                     newCard.find(".model_poster_path").prop("id", this.id);
                     if (this.poster_path != "" && this.poster_path != null && this.poster_path != typeof (undefined)) {
                         newCard.find(".model_poster_path").prop("src", "https://image.tmdb.org/t/p/w500" + this.poster_path);
                     } else {
                         newCard.find(".model_poster_path").prop("src", "/img/movie_dark8.png");
                     }
-                    //DownloadPoster(this.id, this.poster_path);
                     $("#resultContainer").append(newCard);
+                    Show(newCard);
                 });
+                WaitLoading(false);
             }
         });
     }
@@ -166,7 +192,49 @@
         });
     }
 
-    //Получение количества фильмов
+    function SetMessage(message, advancedMessage) {
+        $("#messageLabel").html(message);
+        $("#advancedMessageLabel").html(advancedMessage);
+    }
+
+    function ShowMessagePanel(show) {
+        if (IsUndefined(show)) show = true;
+        if (show) {
+            Show($("#messagePanel"));
+            Hide($("#resultContainer"));
+        } else {
+            Hide($("#messagePanel"));
+            Show($("#resultContainer"));
+        }
+    }
+
+    function HideMessagePanel() {
+        ShowMessagePanel(false);
+    }
+
+    function WaitLoading(bool) {
+        if (IsUndefined(bool)) bool = true;
+        if (bool) {
+            SetMessage("@Resources.Resource.AwaitingSearching");
+            ShowMessagePanel();
+
+        } else {
+            SetMessage();
+            HideMessagePanel();
+        }
+    }
+
+    function IsUndefined(obj) {
+        return (typeof obj === 'undefined');
+    }
+
+    function Hide(el) {
+        el.css("visibility","collapse");
+    }
+
+    function Show(el) {
+        el.css("visibility", "visible");
+    }
 </script>
 
 <style>

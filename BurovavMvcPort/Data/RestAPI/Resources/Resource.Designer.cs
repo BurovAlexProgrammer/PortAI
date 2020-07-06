@@ -79,6 +79,60 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Average vote .
+        /// </summary>
+        public static string Average_vote {
+            get {
+                return ResourceManager.GetString("Average_vote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A little patience, we are looking.
+        /// </summary>
+        public static string AwaitingSearching {
+            get {
+                return ResourceManager.GetString("AwaitingSearching", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        public static string Back {
+            get {
+                return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start searching.
+        /// </summary>
+        public static string BeginSearch {
+            get {
+                return ResourceManager.GetString("BeginSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Companies.
+        /// </summary>
+        public static string Companies {
+            get {
+                return ResourceManager.GetString("Companies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        public static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date (ascending).
         /// </summary>
         public static string DateAsc {
@@ -120,6 +174,15 @@ namespace Resources {
         public static string Home {
             get {
                 return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Homepage.
+        /// </summary>
+        public static string Homepage {
+            get {
+                return ResourceManager.GetString("Homepage", resourceCulture);
             }
         }
         
@@ -169,6 +232,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Number of votes.
+        /// </summary>
+        public static string Number_of_votes {
+            get {
+                return ResourceManager.GetString("Number_of_votes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Popularity (ascending).
         /// </summary>
         public static string PopularityAsc {
@@ -201,6 +273,15 @@ namespace Resources {
         public static string ReleaseDate {
             get {
                 return ResourceManager.GetString("ReleaseDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Duration.
+        /// </summary>
+        public static string Runtime {
+            get {
+                return ResourceManager.GetString("Runtime", resourceCulture);
             }
         }
         

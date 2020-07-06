@@ -177,4 +177,31 @@
   <data name="NameAsc" xml:space="preserve">
     <value>Name (ascending)</value>
   </data>
+  <data name="BeginSearch" xml:space="preserve">
+    <value>Start searching</value>
+  </data>
+  <data name="AwaitingSearching" xml:space="preserve">
+    <value>A little patience, we are looking</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Average_vote" xml:space="preserve">
+    <value>Average vote </value>
+  </data>
+  <data name="Runtime" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Homepage" xml:space="preserve">
+    <value>Homepage</value>
+  </data>
+  <data name="Companies" xml:space="preserve">
+    <value>Companies</value>
+  </data>
+  <data name="Number_of_votes" xml:space="preserve">
+    <value>Number of votes</value>
+  </data>
 </root>

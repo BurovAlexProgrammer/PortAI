@@ -76,7 +76,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - BurovavMvcPort - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - BurovavMvcPort - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
 
@@ -117,9 +117,10 @@
         });
 
         function ChangeLanguage() {
+            var newLanguage = $("#languageSelect").val();
             $.ajax({
                 type: "POST",
-                url: "/App/SetLanguage/" + $("#languageSelect").val(),
+                url: "/App/SetLanguage/" + newLanguage,
                 success: function (data) {
                     console.log("Ajax success. Data: " + data);
                     location.reload();

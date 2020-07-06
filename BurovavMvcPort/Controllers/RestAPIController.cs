@@ -9,6 +9,7 @@ using BurovavMvcPort.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters.Internal;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -29,8 +30,35 @@ namespace BurovavMvcPort.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Отображение всей информации о фильме. 
+        /// </summary>
+        /// <param name="id">ID фильма</param>
+        /// <returns></returns>
+        public IActionResult Film(long? id)
+        {
+            var currLanguage = new LanguageService().GetCurrentLanguage(HttpContext);
+            var url = $"https://api.themoviedb.org/3/movie/{id}?api_key={apiKey}&language={currLanguage}";
+            JObject jsonAnswer;
+            using (var webClient = new WebClient())
+            {
+                var response = webClient.DownloadString(url);
+                jsonAnswer = JObject.Parse(response);
+            }
+            ViewBag.Film = jsonAnswer;
+            return View();
+        }
 
-        public JsonResult StarSearch(string query, int? year, string sort)
+        /// <summary>
+        /// Поиск фильмов по параметрам. Возвращает List of Film
+        /// </summary>
+        /// <param name="query">Искомый текст (обязательно)</param>
+        /// <param name="year">Год релиза</param>
+        /// <param name="sort">Тип сортировки</param>
+        /// <param name="genreId">Id жанра</param>
+        /// <param name="vote">Минимальная оценка</param>
+        /// <returns></returns>
+        public JsonResult StarSearch(string query, int? year, string sort, int? genreId, string vote)
         {
             JObject jsonAnswer;
             var total_results = 0;
@@ -71,6 +99,11 @@ namespace BurovavMvcPort.Controllers
                 });
             }
             Task.WaitAll(pageTasks);
+            //Обработка результатов
+            if (year != null)
+            {
+                result = result.Where(r => r.year == year).ToList();
+            }
             switch (sort)
             {
                 case "popularDesc":
@@ -92,10 +125,21 @@ namespace BurovavMvcPort.Controllers
                     result = result.OrderBy(f => f.title).ToList();
                     break;
             }
+            if (genreId != null & genreId != 0)
+            {
+                result = result.Where(r => r.genre_ids.Contains(genreId ?? 0)).ToList();
+            }
+            if (vote != Resources.Resource.Any)
+            {
+                result = result.Where(r => r.vote_average >= int.Parse(vote)).ToList();
+            }
             return Json(result);
         }
 
-        //Получить список жанров
+        /// <summary>
+        /// Получение списока жанров
+        /// </summary>
+        /// <returns>List of Genre</returns>
         public JsonResult GetGenres()
         {
             var currLanguage = new LanguageService().GetCurrentLanguage(HttpContext);
@@ -110,6 +154,7 @@ namespace BurovavMvcPort.Controllers
                 return Json(genres);
             }
         }
+
 
 
         /*

@@ -55,7 +55,7 @@ $.extend( $.fn, {
 				}
 
 				// Allow suppressing validation by adding the html5 formnovalidate attribute to the submit button
-				if ( $( this ).attr( "formnovalidate" ) !== undefined ) {
+				if ( $( this ).attr( "formnovalidate" ) !== IsUndefined ) {
 					validator.cancelSubmit = true;
 				}
 			} );
@@ -89,7 +89,7 @@ $.extend( $.fn, {
 							// And clean up afterwards; thanks to no-block-scope, hidden can be referenced
 							hidden.remove();
 						}
-						if ( result !== undefined ) {
+						if ( result !== IsUndefined ) {
 							return result;
 						}
 						return false;
@@ -250,7 +250,7 @@ $.validator.format = function( source, params ) {
 			return $.validator.format.apply( this, args );
 		};
 	}
-	if ( params === undefined ) {
+	if ( params === IsUndefined ) {
 		return source;
 	}
 	if ( arguments.length > 2 && params.constructor !== Array  ) {
@@ -468,7 +468,7 @@ $.extend( $.validator, {
 				result = true,
 				rs, group;
 
-			if ( checkElement === undefined ) {
+			if ( checkElement === IsUndefined ) {
 				delete this.invalid[ cleanElement.name ];
 			} else {
 				this.prepareElement( checkElement );
@@ -581,7 +581,7 @@ $.extend( $.validator, {
 
 				// This check allows counting elements with empty error
 				// message as invalid elements
-				if ( obj[ i ] !== undefined && obj[ i ] !== null && obj[ i ] !== false ) {
+				if ( obj[ i ] !== IsUndefined && obj[ i ] !== null && obj[ i ] !== false ) {
 					count++;
 				}
 			}
@@ -830,11 +830,11 @@ $.extend( $.validator, {
 		// Return the first defined argument, allowing empty strings
 		findDefined: function() {
 			for ( var i = 0; i < arguments.length; i++ ) {
-				if ( arguments[ i ] !== undefined ) {
+				if ( arguments[ i ] !== IsUndefined ) {
 					return arguments[ i ];
 				}
 			}
-			return undefined;
+			return IsUndefined;
 		},
 
 		// The second parameter 'rule' used to be a string, and extended to an object literal
@@ -856,7 +856,7 @@ $.extend( $.validator, {
 					this.customDataMessage( element, rule.method ),
 
 					// 'title' is never undefined, so handle empty string as undefined
-					!this.settings.ignoreTitle && element.title || undefined,
+					!this.settings.ignoreTitle && element.title || IsUndefined,
 					$.validator.messages[ rule.method ],
 					"<strong>Warning: No message defined for " + element.name + "</strong>"
 				),
@@ -1189,7 +1189,7 @@ $.extend( $.validator, {
 
 			// Support Opera Mini, which returns NaN for undefined minlength
 			if ( isNaN( value ) ) {
-				value = undefined;
+				value = IsUndefined;
 			}
 		}
 
@@ -1282,7 +1282,7 @@ $.extend( $.validator, {
 					break;
 				}
 				if ( keepRule ) {
-					rules[ prop ] = val.param !== undefined ? val.param : true;
+					rules[ prop ] = val.param !== IsUndefined ? val.param : true;
 				} else {
 					$.data( element.form, "validator" ).resetElements( $( element ) );
 					delete rules[ prop ];
@@ -1346,7 +1346,7 @@ $.extend( $.validator, {
 	// https://jqueryvalidation.org/jQuery.validator.addMethod/
 	addMethod: function( name, method, message ) {
 		$.validator.methods[ name ] = method;
-		$.validator.messages[ name ] = message !== undefined ? message : $.validator.messages[ name ];
+		$.validator.messages[ name ] = message !== IsUndefined ? message : $.validator.messages[ name ];
 		if ( method.length < 3 ) {
 			$.validator.addClassRules( name, $.validator.normalizeRule( name ) );
 		}

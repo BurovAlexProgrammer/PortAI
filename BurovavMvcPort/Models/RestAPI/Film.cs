@@ -20,6 +20,7 @@ namespace BurovavMvcPort.Models.RestAPI
         int? _year;
         public int? year { get { return release_date?.Year; } }
         public string overview { get; set; }
+        public float? vote_average { get; set; }
     }
 
     public interface IFilm
@@ -34,5 +35,6 @@ namespace BurovavMvcPort.Models.RestAPI
         DateTime? release_date { get; set; }
         int? year { get; }
         string overview { get; set; }
+        float? vote_average { get; set; }
     }
 }

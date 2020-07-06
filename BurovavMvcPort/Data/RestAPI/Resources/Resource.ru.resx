@@ -177,4 +177,31 @@
   <data name="NameAsc" xml:space="preserve">
     <value>Имя (по возрастанию)</value>
   </data>
+  <data name="BeginSearch" xml:space="preserve">
+    <value>Начинайте искать</value>
+  </data>
+  <data name="AwaitingSearching" xml:space="preserve">
+    <value>Немного терпения, мы ищем</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Страна</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="Average_vote" xml:space="preserve">
+    <value>Средняя оценка </value>
+  </data>
+  <data name="Runtime" xml:space="preserve">
+    <value>Продолжительность</value>
+  </data>
+  <data name="Homepage" xml:space="preserve">
+    <value>Домашняя страница</value>
+  </data>
+  <data name="Companies" xml:space="preserve">
+    <value>Организации</value>
+  </data>
+  <data name="Number_of_votes" xml:space="preserve">
+    <value>Количество голосов</value>
+  </data>
 </root>

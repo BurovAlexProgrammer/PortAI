@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using BurovavMvcPort.Services;
 using Microsoft.AspNetCore.Routing;
 
+
 namespace BurovavMvcPort {
     public class Startup {
         public Startup(IConfiguration configuration) {
@@ -31,15 +32,18 @@ namespace BurovavMvcPort {
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-
-            services.AddMvc();
+           // services.AddNewtonsoftJson();
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver();
+            });
             services.AddTransient<ILanguageService, LanguageService>();
             services.AddLocalization();
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2); Было так, попробую удалить для публикации

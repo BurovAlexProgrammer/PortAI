@@ -1,0 +1,129 @@
+﻿@{
+    ViewData["Title"] = "Film details";
+    Layout = "~/Views/Shared/_LayoutRestAPI.cshtml";
+
+    var runtime = "";
+    if (@ViewBag.Film.runtime != null)
+    {
+        var hours = Math.Floor(Convert.ToDecimal(ViewBag.Film.runtime) / 60);
+        var minutes = Convert.ToDecimal(ViewBag.Film.runtime) % 60;
+        runtime = (hours > 0 ? hours + ":" : "") + (Convert.ToString(minutes).PadLeft(2,'0'));
+    }
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div class="row">
+    <button class="btn btn-primary m-2 ml-4" onclick="window.history.back();">@Resources.Resource.Back</button>
+</div>
+<div class="row">
+    <h1 class="pl-5"> @ViewBag.Film.title</h1>
+    <h1 class="pl-5"> (@ViewBag.Film.original_title)</h1>
+</div>
+<div class="row mt-4">
+    <div class="col-4">
+        <img class="model_poster_path rounded img-fluid" src="https://image.tmdb.org/t/p/w500/@ViewBag.Film.poster_path"  onerror="this.src = '/img/movie_dark8.png'" style="width: 16rem;" />
+    </div>
+    <div class="col-6">
+        @if (ViewBag.Film.vote_average != null & ViewBag.Film.vote_average != 0)
+        {
+            <div class="row">
+                <div class="col-4"> @Resources.Resource.Average_vote</div>
+                <div class="col-6"> <label>@ViewBag.Film.vote_average</label> <label class="text-secondary"> (@Resources.Resource.Number_of_votes: @ViewBag.Film.vote_count)</label></div>
+            </div>
+        }
+        @if (ViewBag.Film.production_countries.Count != 0)
+        {
+            <div class="row">
+                <div class="col-4"> @Resources.Resource.Country</div>
+                <div class="col-6"> @ViewBag.Film.production_countries[0].name </div>
+            </div>
+        }
+        @if (runtime != string.Empty)
+        {
+            <div class="row">
+                <div class="col-4"> @Resources.Resource.Runtime</div>
+                <div class="col-6"> @runtime </div>
+            </div>
+        }
+        @if (ViewBag.Film.genres.Count != 0)
+        {
+            <div class="row">
+                <div class="col-4"> @Resources.Resource.Genres</div>
+                <div class="col-6">
+                    <ul>
+                        @foreach (var genre in ViewBag.Film.genres)
+                        {
+                            <li>@genre.name</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+        @if (ViewBag.Film.homepage != string.Empty)
+        {
+            <div class="row">
+                <div class="col-4"> @Resources.Resource.Homepage</div>
+                <div class="col-6"> <a href="@ViewBag.Film.homepage"> @ViewBag.Film.homepage </a> </div>
+            </div>
+        }
+        @if (ViewBag.Film.production_companies.Count != 0)
+        {
+            <div class="row">
+                <div class="col-4"> @Resources.Resource.Companies</div>
+                <div class="col-6">
+                    <ul>
+                        @foreach (var company in ViewBag.Film.production_companies)
+                        {
+                        <li>
+                            <label>@company.name</label>
+                            <!--<img class="img-logo" src="https://image.tmdb.org/t/p/w500/@company.logo_path" onerror="this.src = '/img/no_logo2.png'" />-->
+                        </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="row mt-4">
+    <label class="ml-4 mr-4"> @ViewBag.Film.overview</label>
+</div>
+
+
+<script type="text/javascript">
+
+
+    var genreData;
+    $(document).ready(function () {
+        //Получение списка жанров
+        getGenresList();
+    });
+
+    //Получение списка жанров
+    function getGenresList() {
+        $.ajax({
+            type: "POST",
+            url: "/RestAPI/GetGenres",
+            success: function (data) {
+                genreData = data;
+            }
+        });
+    }
+
+    function GetGenre(genreId) {
+        $(genreData).each(function () {
+            if (this.id == genreId) return this.name;
+        });
+        return "";
+    }
+</script>
+
+<style>
+    .img-logo {
+        object-position: center; /* Center the image within the element */
+        max-width: 50px;
+        max-height: 50px;
+        margin-bottom: 1rem;
+    }
+</style>
