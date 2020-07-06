@@ -4,8 +4,6 @@
     string currentYear = DateTime.Now.Year.ToString();
 }
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 <div class="row">
     <h1 class="pl-5">@Resources.Resource.MovieSearch</h1>
 </div>
@@ -16,14 +14,11 @@
                 <input type="button" class="btn btn-block btn-danger" value="Test" onclick="Test();" />
             </div>
 
-
             <div class="form-group">
                 <input type="button" class="btn btn-block btn-primary" id="startSearchButton" value=@Resources.Resource.StartSearch onclick="StarSearch()" />
             </div>
 
             <div class="form-group">
-                <label for="searchText" style="display:none;">Search</label>
-
                 @Html.TextBox("searchText", "", htmlAttributes: new { @type = "search", @class = "form-control", @placeholder = Resources.Resource.Keywords })
             </div>
 
@@ -37,13 +32,10 @@
                     <option value="nameDesc">@Resources.Resource.NameDesc</option>
                     <option value="nameAsc">@Resources.Resource.NameAsc</option>
                 </select>
-
-
             </div>
 
             <div class="form-group">
                 <div class="custom-control custom-switch">
-
                     @Html.CheckBox("showAdvanceSearchToggle", false, htmlAttributes: new { @class = "custom-control-input", @onchange = "SwitchDisplayAdvanceSearchPanel();" })
                     <label class="custom-control-label" for="showAdvanceSearchToggle">@Resources.Resource.Advanced</label>
                 </div>
@@ -74,9 +66,7 @@
 
         </div>
         <div class="col-9">
-            <div id="resultContainer" class="row">
-
-            </div>
+            <div id="resultContainer" class="row"></div>
             <div id="messagePanel">
                 <label id="messageLabel" class="h1"></label>
                 <label id="advancedMessageLabel" class="h3"></label>
@@ -107,7 +97,6 @@
     $(document).ready(function () {
         //Получение списка жанров
         getGenresList();
-
         ShowMessagePanel();
         SetMessage('@Resources.Resource.BeginSearch');
 
@@ -141,6 +130,7 @@
         }
     }
 
+    //Поиск фильмов
     function StarSearch() {
         WaitLoading(true);
         var query = $("#searchText").val();

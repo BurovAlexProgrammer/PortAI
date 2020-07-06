@@ -6,11 +6,6 @@
     <title>@ViewBag.Title</title>
 
     <environment include="Development">
-        <!--
-
-    <link rel="stylesheet" href="~/themes/grayscale.css" />
-        -->
-
         <link href="~/themes/myBootstrap1.css" rel="stylesheet" />
     </environment>
     <environment exclude="Development">
@@ -38,7 +33,6 @@
                     <environment exclude="Development">
                         <span class="text-success">Release</span> mode
                     </environment>
-                    &nbsp;&nbsp;&nbsp;
                 </p>
                 <a class="navbar-brand float-left " asp-area="" asp-controller="Home" asp-action="Index"><p class="mb-0 h2">Port<span class="text-success">AI</span></p></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -48,10 +42,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item" id="navItemHome">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">@Resources.Resource.Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">@Resources.Resource.Home</a>
                         </li>
                         <li class="nav-item" id="navItemPortfolio">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Portfolio">@Resources.Resource.Portfolio</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Portfolio">@Resources.Resource.Portfolio</a>
                         </li>
                     </ul>
                 </div>
@@ -80,27 +74,6 @@
         </div>
     </footer>
 
-    <!--
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        <script src="~/js/grayscale.js"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
-        </script>
-    </environment>
-    -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
@@ -109,10 +82,8 @@
             var currentLanguage = $("#currentLanguage").val();
             if (currentLanguage) {
                 SelectOptionByValue("currentLanguage",currentLanguage);
-                //alert("set " + currentLanguage);
             } else {
                 $("#currentLanguage").prop("selectedIndex", 0);
-                //alert("set 0");
             }
         });
 
@@ -133,7 +104,6 @@
 
         function SelectOptionByValue(documentId, value) {
             $("#languageSelect").val(value);
-           // alert($("#" + documentId).prop("selectedIndex"));
         }
     </script>
 

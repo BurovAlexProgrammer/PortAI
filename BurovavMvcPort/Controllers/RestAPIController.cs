@@ -19,12 +19,10 @@ namespace BurovavMvcPort.Controllers
     {
         public string apiKey = "fe5014b6b8fbc18a3b524c96eea4e3ee";
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-    
+        /// <summary>
+        /// Страница с поиском фильмов
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Home()
         {
             return View();
@@ -154,35 +152,5 @@ namespace BurovavMvcPort.Controllers
                 return Json(genres);
             }
         }
-
-
-
-        /*
-        Movie movie = Newtonsoft.Json.JsonConvert.DeserializeObject<Movie>(response);
-
-        if (movie.Response)
-        {
-            fName.Content = movie.Title;
-            fYear.Content = movie.Year;
-            fActors.Content = movie.Actors;
-            fCountry.Content = movie.Country;
-            fLang.Content = movie.Language;
-            fGenre.Content = movie.Genre;
-            fDesc.Text = movie.Plot;
-
-            if (movie.Poster != "N/A")
-            {
-                Thread t = new Thread(() => LoadImage(movie));
-                t.Start();
-            }
-            else
-                fPoster.Source = null;
-        }
-        else
-        {
-            MessageBox.Show(movie.Error, "Фильм не найден", MessageBoxButton.OK, MessageBoxImage.Warning);
-        }
-        */
-
     }
 }
