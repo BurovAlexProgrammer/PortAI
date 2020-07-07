@@ -117,91 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Genres" xml:space="preserve">
-    <value>Genre</value>
+  <data name="About" xml:space="preserve">
+    <value>Пра сябе</value>
   </data>
-  <data name="Portfolio" xml:space="preserve">
-    <value>Portfolio</value>
+  <data name="Contacts" xml:space="preserve">
+    <value>Кантакты</value>
+  </data>
+  <data name="DownloadApp" xml:space="preserve">
+    <value>Спампаваць дадатак</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Перайдзіце на старонку
+</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Галоўная</value>
   </data>
-  <data name="Genre" xml:space="preserve">
-    <value>Genre</value>
+  <data name="Mail" xml:space="preserve">
+    <value>Пошты</value>
   </data>
-  <data name="Years" xml:space="preserve">
-    <value>Jahre</value>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Мяне завуць Аляксей. Мне падабаецца праграмаваць і я ўвесь час развіваюся ў гэтым кірунку. Маё прыцягненне да праграмавання пачалося з урокаў інфарматыкі ў школе, потым я пайшоў вучыцца ў інстытут на факультэт інфарматыкі. &lt;br /&gt;</value>
   </data>
-  <data name="Keywords" xml:space="preserve">
-    <value>Schlüsselwörter</value>
+  <data name="MyProjectBlitzDemo1" xml:space="preserve">
+    <value>Нядрэнная застаўка атрымалася падчас вывучэння рухавіка. Захоп кадра на Blitz3d вельмі складаны для сістэмы, але сучасныя ПК могуць гэта зрабіць. Больш за ўсё мне запомнілася распрацоўка календара з магчымасцю перагортвання па месяцах!</value>
   </data>
-  <data name="ReleaseDate" xml:space="preserve">
-    <value>Veröffentlichungsdatum</value>
+  <data name="MyProjectBlitzDemo2" xml:space="preserve">
+    <value>Я вырашыў распрацаваць лабірынты, калі на працы было сумна. Я вырашыў пацешыць сваіх калегаў, але гэта атрымалася для мяне самым вясёлым, калі я зразумеў, што хутка пабудаваць карты на кансолі IDE, напісаць уласны рэдактар). Гэта быў цікавы досвед і добры вынік!</value>
   </data>
-  <data name="IMDBRating" xml:space="preserve">
-    <value>IMDb-Bewertung</value>
+  <data name="MyProjectBlitzDemo3" xml:space="preserve">
+    <value>Гэты праект з&amp;#39;явіўся, калі я хацеў павіншаваць сваю дзяўчыну з віртуальнай паштоўкай. Я вырашыў генераваць бясплатна квітнеючыя кветкі. Імітаванае падзенне пялёсткаў з дапамогай кантролера (ручной генератар часціц). Мне спадабалася распрацаваць сістэму росту сцябла і кветкі на аснове прынцыпу спадчыны і зменлівых характарыстык.!</value>
   </data>
-  <data name="MovieSearch" xml:space="preserve">
-    <value>Filmsuche</value>
+  <data name="MyProjectBlitzDemo4" xml:space="preserve">
+    <value>Гэта мая апошняя і самая вялікая распрацоўка рухавіка Blitz3D. Тут вынайдзена шмат цікавых рашэнняў, шкада, што рухавік састарэў. У гэтым праекце я распрацаваў змену дня і ночы, сістэму росту раслін і ўрадлівасці глебы, LOD здалёк, выкарыстанне шэйдараў і многае іншае!</value>
   </data>
-  <data name="Advanced" xml:space="preserve">
-    <value>Erweitert</value>
+  <data name="Phone" xml:space="preserve">
+    <value>Тэлефон</value>
   </data>
-  <data name="Any" xml:space="preserve">
-    <value>Beliebig</value>
+  <data name="Portfolio" xml:space="preserve">
+    <value>Партфель</value>
   </data>
-  <data name="StartSearch" xml:space="preserve">
-    <value>Suche starten</value>
+  <data name="RestAPIDemo1" xml:space="preserve">
+    <value>Мне стала цікава паспрабаваць RestAPI, я выбраў тэму - Пошук фільмаў. Таму што ясна. У гэтым праекце я выкарыстаў шмат новых для мяне тэхналогій, гэта: прамежкавае праграмнае забеспячэнне, загрузка, лакалізацыя (асаблівая падзяка распрацоўшчыкам &lt;a href = 'https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager#review-details'&gt; убудова &lt;/a&gt;), шматпаточная загрузка калекцыі фільмаў. Я выкарыстаў tmdb api, ён мае абмежаванне (1 запыт змяшчае максімум 30 фільмаў), выкарыстанне шматструменнасці значна скараціла час загрузкі.</value>
   </data>
-  <data name="Year" xml:space="preserve">
-    <value>Jahr</value>
+  <data name="ShowMail" xml:space="preserve">
+    <value>Паказаць лісты</value>
   </data>
-  <data name="SortingLabel" xml:space="preserve">
-    <value>Sortierung</value>
-  </data>
-  <data name="PopularityDesc" xml:space="preserve">
-    <value>Popularität (absteigend)</value>
-  </data>
-  <data name="PopularityAsc" xml:space="preserve">
-    <value>Popularität (aufsteigend)</value>
-  </data>
-  <data name="DateDesc" xml:space="preserve">
-    <value>Datum (absteigend)</value>
-  </data>
-  <data name="DateAsc" xml:space="preserve">
-    <value>Datum (aufsteigend)</value>
-  </data>
-  <data name="NameDesc" xml:space="preserve">
-    <value>Name (absteigend)</value>
-  </data>
-  <data name="NameAsc" xml:space="preserve">
-    <value>Name (aufsteigend)</value>
-  </data>
-  <data name="BeginSearch" xml:space="preserve">
-    <value>Suche starten</value>
-  </data>
-  <data name="AwaitingSearching" xml:space="preserve">
-    <value>Ein bisschen Geduld suchen wir</value>
-  </data>
-  <data name="Country" xml:space="preserve">
-    <value>Land</value>
-  </data>
-  <data name="Back" xml:space="preserve">
-    <value>Zurück</value>
-  </data>
-  <data name="Average_vote" xml:space="preserve">
-    <value>Abstimmen </value>
-  </data>
-  <data name="Runtime" xml:space="preserve">
-    <value>Dauer</value>
-  </data>
-  <data name="Homepage" xml:space="preserve">
-    <value>Startseite</value>
-  </data>
-  <data name="Companies" xml:space="preserve">
-    <value>Firmen</value>
-  </data>
-  <data name="Number_of_votes" xml:space="preserve">
-    <value>Anzahl der Stimmen</value>
+  <data name="ShowPhone" xml:space="preserve">
+    <value>Тэлефон</value>
   </data>
 </root>

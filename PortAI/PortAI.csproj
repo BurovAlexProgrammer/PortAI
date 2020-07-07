@@ -7,16 +7,60 @@
     <UserSecretsId>7ddc688d-d4db-4fc7-be94-b34c0d8e5e0b</UserSecretsId>
   </PropertyGroup>
 
-
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
-
   <ItemGroup>
-    <Folder Include="Data\BurovAV\" />
+    <Compile Update="Data\BurovAV\BurovAV.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BurovAV.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="Data\BurovAV\BurovAV.sv.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\BurovAV\BurovAV.de.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\BurovAV\BurovAV.be.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\BurovAV\BurovAV.cs.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\BurovAV\BurovAV.fi.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\BurovAV\BurovAV.fr.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\BurovAV\BurovAV.ru.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\BurovAV\BurovAV.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

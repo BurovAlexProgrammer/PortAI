@@ -1,25 +1,22 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = Resources.BurovAV.About;
     Layout = "~/Views/Shared/_BurovavLayout.cshtml";
 
-/*
-Меня зовут Алексей. Мне нравится программировать и я постоянно развиваюсь в этом направлении. Началось мое влечение к программированию с уроков информатики в школе, затем пошел учиться в институт на факультет информатики. 
-После окончания ВУза вернулся в родной город и начал искать работу. В маленьком городе сложнее найти работу, особенно программистом. Тогда я решил не тратить время и пошел работать инженером электроником. Так как свободного времени было достаточно, я развивался в направлении гамедев. На тот момент я еще не знал о существовании мощных игровых движков, поэтому пользовался ранее мне известным Блитц3Д. Это был очень полезный и интересный опыт - я хорошо разобрался в работе рендера, фреймах, писал свои физические эффекты, генераторы частиц и многое другое. 
-Потом я узнал о существовании токого великолепного движка как Юнити3д. Его возможности меня поразили, и работа на этом движке стала моей мечтой. 
-Но в моем городе есть только одна большая организация со специальностями программиста - "Сибинтек", в ней я на данный момент и работаю. Работа интересная, сопровождаем корпоративный портал, разрабатываем кастомные формы, веб-части и дополнительный функционал, где ШареПоинт не справляется. Здесь я хорошо подтянул C#, ASP Net, JS / jQuery, SQL. Полностью разработал клиент-приложение (C#, WPF, SQL).
-Я планирую и дальше развиваться и сейчас рассматриваю переезд в другой город.
-*/
+    /*
+    Меня зовут Алексей. Мне нравится программировать и я постоянно развиваюсь в этом направлении. Началось мое влечение к программированию с уроков информатики в школе, затем пошел учиться в институт на факультет информатики. <br/>
+    После окончания ВУза вернулся в родной город и начал искать работу. В маленьком городе сложнее найти работу, особенно программистом. Тогда я решил не тратить время и пошел работать инженером электроником. Так как свободного времени было достаточно, я развивался в направлении геймдев. На тот момент я еще не знал о существовании мощных игровых движков, поэтому пользовался ранее мне известным Блитц3Д. Это был очень полезный и интересный опыт - я хорошо разобрался в работе рендера, фреймах, писал свои физические эффекты, генераторы частиц и многое другое. <br/>
+    Потом я узнал о существовании токого великолепного движка как Unity3D. Его возможности меня поразили, и работа на этом движке стала моей мечтой. <br/>
+    Но в моем городе есть только одна большая организация со специальностями программиста - "Сибинтек", в ней я на данный момент и работаю. Работа интересная, сопровождаем корпоративный портал, разрабатываем кастомные формы, веб-части и дополнительный функционал, где ШареПоинт не справляется. Здесь я хорошо подтянул C#, ASP Net, JS / jQuery, SQL. Полностью разработал клиент-приложение (C#, WPF, SQL).<br/>
+    Я планирую и дальше развиваться и сейчас рассматриваю переезд в другой город.<br/>
+    */
 }
 
-<h1>About me</h1>
+    <h1> @Resources.BurovAV.About</h1>
 
 
-<p class="h5" style="line-height:1.8">
-    <img src="~/img/burovav_photo.jpg" width="240" style="float: left; margin: 8px 32px 8px 0px;" />
-    My name is Aleksey. I like to program and I am constantly developing in this direction. My attraction to programming began with computer science lessons at school, then I went to study at the institute at the faculty of computer science. <br />
-    After graduation, he returned to his hometown and began to look for work. In a small town, it’s harder to find a job, especially as a programmer. Then I decided not to waste time and went to work as an electronic engineer. Since there was enough free time, I developed in the direction of gamedev. At that time, I still did not know about the existence of powerful game engines, so I used the famous Blitz3D earlier. It was a very useful and interesting experience - I was well versed in the work of rendering, frames, wrote my physical effects, particle generators and much more. <br />
-    Then I found out about the existence of this magnificent engine like Unity3d. His capabilities amazed me, and working on this engine became my dream. <br />
-    But in my city there is only one large organization with the specialties of a programmer - Sibintek, and I currently work in it. The work is interesting, we accompany the corporate portal, we develop custom forms, web parts and additional functionality where SharePoint does not cope. Here I pulled well C #, ASP Net, JS / jQuery, SQL. Fully developed a client application (C #, WPF, SQL).<br />
-    I plan to further develop and am currently considering moving to another city.
-</p>
+    <p class="h5" style="line-height:1.8">
+        <img src="~/img/burovav_photo.jpg" width="240" style="float: left; margin: 8px 32px 8px 0px;" />
+        @Html.Raw(@Resources.BurovAV.MyBiography)
+
+    </p>

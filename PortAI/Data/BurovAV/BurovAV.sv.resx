@@ -117,91 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Genres" xml:space="preserve">
-    <value>Genre</value>
+  <data name="About" xml:space="preserve">
+    <value>OM MIG SJÄLV</value>
   </data>
-  <data name="Portfolio" xml:space="preserve">
-    <value>Portfolio</value>
+  <data name="Contacts" xml:space="preserve">
+    <value>Kontakter</value>
+  </data>
+  <data name="DownloadApp" xml:space="preserve">
+    <value>Ladda ned appen</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Gå till sidan</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Hem
+</value>
   </data>
-  <data name="Genre" xml:space="preserve">
-    <value>Genre</value>
+  <data name="Mail" xml:space="preserve">
+    <value>E-post</value>
   </data>
-  <data name="Years" xml:space="preserve">
-    <value>Jahre</value>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Jag heter Aleksey. Jag gillar att programmera och utvecklas ständigt i denna riktning. Min attraktion för programmering började med datavetenskapslektioner i skolan, sedan gick jag för att studera vid institutet vid fakulteten för datavetenskap. &lt;br /&gt;</value>
   </data>
-  <data name="Keywords" xml:space="preserve">
-    <value>Schlüsselwörter</value>
+  <data name="MyProjectBlitzDemo1" xml:space="preserve">
+    <value>En bra skärmsläckare visade sig när man studerade motorn. Att fånga en ram på Blitz3d är mycket stressande för systemet, men moderna datorer kan göra det. Mest av allt minns jag utvecklingen av en kalender med förmågan att vända över månaderna.!</value>
   </data>
-  <data name="ReleaseDate" xml:space="preserve">
-    <value>Veröffentlichungsdatum</value>
+  <data name="MyProjectBlitzDemo2" xml:space="preserve">
+    <value>Jag bestämde mig för att utveckla labyrinter när det var tråkigt på jobbet. Jag bestämde mig för att underhålla mina kollegor, men det visade sig vara det roligaste för mig när jag insåg att för att snabbt bygga kartor på konsolen IDE, skriva din egen redaktör) Det var en intressant upplevelse och ett bra resultat!</value>
   </data>
-  <data name="IMDBRating" xml:space="preserve">
-    <value>IMDb-Bewertung</value>
+  <data name="MyProjectBlitzDemo3" xml:space="preserve">
+    <value>Detta projekt dök upp när jag ville gratulera min flickvän till ett virtuellt vykort. Jag bestämde mig för att generera gratis blommande blommor. Simulerade kronbladens fall av regulatorn (manuell partikelgenerator). Jag gillade att utveckla ett system med stam- och blomstertillväxt baserat på principen om arv och förändrade egenskaper.!</value>
   </data>
-  <data name="MovieSearch" xml:space="preserve">
-    <value>Filmsuche</value>
+  <data name="MyProjectBlitzDemo4" xml:space="preserve">
+    <value>Detta är min sista och största utveckling på Blitz3D-motorn. Många intressanta lösningar uppfanns här, det är synd att motorn är föråldrad. I detta projekt utvecklade jag en förändring av dag och natt, ett system med växttillväxt och jordfruktbarhet, LOD på avstånd, användning av skuggare och mycket mer.!</value>
   </data>
-  <data name="Advanced" xml:space="preserve">
-    <value>Erweitert</value>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefon</value>
   </data>
-  <data name="Any" xml:space="preserve">
-    <value>Beliebig</value>
+  <data name="Portfolio" xml:space="preserve">
+    <value>Portfölj</value>
   </data>
-  <data name="StartSearch" xml:space="preserve">
-    <value>Suche starten</value>
+  <data name="RestAPIDemo1" xml:space="preserve">
+    <value>Det blev intressant för mig att prova RestAPI, jag valde ämnet - Sök efter filmer. För det är klart. I detta projekt använde jag många nya tekniker för mig, dessa var: middleware, bootstrap, lokalisering (särskilt tack till utvecklarna av &lt;a href='https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager#review-details'&gt; plugin &lt;/a&gt;), flera trådade nedladdningar av en samling filmer. Jag använde tmdb api, det har en begränsning (1 begäran innehåller högst 30 filmer) användningen av multithreading minskade nedladdningstiden avsevärt.</value>
   </data>
-  <data name="Year" xml:space="preserve">
-    <value>Jahr</value>
+  <data name="ShowMail" xml:space="preserve">
+    <value>Visa e-post</value>
   </data>
-  <data name="SortingLabel" xml:space="preserve">
-    <value>Sortierung</value>
-  </data>
-  <data name="PopularityDesc" xml:space="preserve">
-    <value>Popularität (absteigend)</value>
-  </data>
-  <data name="PopularityAsc" xml:space="preserve">
-    <value>Popularität (aufsteigend)</value>
-  </data>
-  <data name="DateDesc" xml:space="preserve">
-    <value>Datum (absteigend)</value>
-  </data>
-  <data name="DateAsc" xml:space="preserve">
-    <value>Datum (aufsteigend)</value>
-  </data>
-  <data name="NameDesc" xml:space="preserve">
-    <value>Name (absteigend)</value>
-  </data>
-  <data name="NameAsc" xml:space="preserve">
-    <value>Name (aufsteigend)</value>
-  </data>
-  <data name="BeginSearch" xml:space="preserve">
-    <value>Suche starten</value>
-  </data>
-  <data name="AwaitingSearching" xml:space="preserve">
-    <value>Ein bisschen Geduld suchen wir</value>
-  </data>
-  <data name="Country" xml:space="preserve">
-    <value>Land</value>
-  </data>
-  <data name="Back" xml:space="preserve">
-    <value>Zurück</value>
-  </data>
-  <data name="Average_vote" xml:space="preserve">
-    <value>Abstimmen </value>
-  </data>
-  <data name="Runtime" xml:space="preserve">
-    <value>Dauer</value>
-  </data>
-  <data name="Homepage" xml:space="preserve">
-    <value>Startseite</value>
-  </data>
-  <data name="Companies" xml:space="preserve">
-    <value>Firmen</value>
-  </data>
-  <data name="Number_of_votes" xml:space="preserve">
-    <value>Anzahl der Stimmen</value>
+  <data name="ShowPhone" xml:space="preserve">
+    <value>Visa telefon</value>
   </data>
 </root>

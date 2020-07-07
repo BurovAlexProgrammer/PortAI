@@ -136,13 +136,13 @@
     <value>КлючавыяСловы</value>
   </data>
   <data name="ReleaseDate" xml:space="preserve">
-    <value>Дата выпуску:</value>
+    <value>Дата выпуску</value>
   </data>
   <data name="IMDBRating" xml:space="preserve">
-    <value>Рэйтынг iMDB!</value>
+    <value>Рэйтынг iMDB</value>
   </data>
   <data name="MovieSearch" xml:space="preserve">
-    <value>Пошук фільмаў!</value>
+    <value>Пошук фільмаў</value>
   </data>
   <data name="Advanced" xml:space="preserve">
     <value>Пашыраная</value>
@@ -190,7 +190,7 @@
     <value>Ззаду</value>
   </data>
   <data name="Average_vote" xml:space="preserve">
-    <value>Сярэдне</value>
+    <value>Сярэдне </value>
   </data>
   <data name="Runtime" xml:space="preserve">
     <value>Працягласць</value>
@@ -199,7 +199,7 @@
     <value>Хатняя старонка падтрымкі</value>
   </data>
   <data name="Companies" xml:space="preserve">
-    <value>Арганізацыі:</value>
+    <value>Арганізацыі</value>
   </data>
   <data name="Number_of_votes" xml:space="preserve">
     <value>Колькасць галасоў</value>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PortAI</title>
+    <title>PortAI - @Resources.BurovAV.BurovAleksey</title>
         <link rel="stylesheet" href="~/themes/flatly/bootstrap.css" />
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
@@ -26,13 +26,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item" id="navItemHome">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Burovav" asp-action="Index">About me</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Burovav" asp-action="Index">@Resources.BurovAV.About</a>
                         </li>
                         <li class="nav-item" id="navItemPortfolio">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Burovav" asp-action="Portfolio">Portfolio</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Burovav" asp-action="Portfolio">@Resources.BurovAV.Portfolio</a>
                         </li>
                         <li class="nav-item" id="navItemContacts">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Burovav" asp-action="Contacts">Contacts</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Burovav" asp-action="Contacts">@Resources.BurovAV.Contacts</a>
                         </li>
                     </ul>
                 </div>
@@ -76,7 +76,7 @@
             var newLanguage = $("#languageSelect").val();
             $.ajax({
             type: "POST",
-                url: "/App/SetLanguage/" + newLanguage,
+                url: "/BurovAV/SetLanguage/" + newLanguage,
                 success: function (data) {
             console.log("Ajax success. Data: " + data);
                     location.reload();

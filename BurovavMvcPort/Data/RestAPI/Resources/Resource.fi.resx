@@ -142,7 +142,7 @@
     <value>Arvostelu</value>
   </data>
   <data name="MovieSearch" xml:space="preserve">
-    <value>Elokuvahaku!</value>
+    <value>Elokuvahaku</value>
   </data>
   <data name="Advanced" xml:space="preserve">
     <value>Lisäasetukset</value>
@@ -190,7 +190,7 @@
     <value>Takaisin</value>
   </data>
   <data name="Average_vote" xml:space="preserve">
-    <value>KESKIVERTO</value>
+    <value>KESKIVERTO </value>
   </data>
   <data name="Runtime" xml:space="preserve">
     <value>Kesto</value>

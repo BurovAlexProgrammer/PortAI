@@ -157,7 +157,7 @@
     <value>År</value>
   </data>
   <data name="SortingLabel" xml:space="preserve">
-    <value>Sortering:</value>
+    <value>Sortering</value>
   </data>
   <data name="PopularityDesc" xml:space="preserve">
     <value>Populärt (fallande)</value>
@@ -190,7 +190,7 @@
     <value>Bakåt</value>
   </data>
   <data name="Average_vote" xml:space="preserve">
-    <value>Genomsnittlig!</value>
+    <value>Genomsnittlig </value>
   </data>
   <data name="Runtime" xml:space="preserve">
     <value>Varaktighet</value>

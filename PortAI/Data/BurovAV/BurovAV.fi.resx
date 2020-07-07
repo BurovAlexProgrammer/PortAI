@@ -117,91 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Genres" xml:space="preserve">
-    <value>Genre</value>
+  <data name="Contacts" xml:space="preserve">
+    <value>Yhteystiedot</value>
+  </data>
+  <data name="DownloadApp" xml:space="preserve">
+    <value>Lataa sovellus palvelimesta</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Siirry viimeiselle sivulle</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Koti</value>
+  </data>
+  <data name="Mail" xml:space="preserve">
+    <value>Posti</value>
+  </data>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Ich heiße Aleksey. Ich programmiere gerne und entwickle mich ständig in diese Richtung. Meine Anziehungskraft für das Programmieren begann mit dem Informatikunterricht in der Schule, dann studierte ich am Institut der Fakultät für Informatik. &lt;br /&gt;</value>
+  </data>
+  <data name="MyProjectBlitzDemo1" xml:space="preserve">
+    <value>Hyvä näytönsäästäjä osoittautui moottoria tutkittaessa. Kehyksen kaappaaminen Blitz3d: lle on järjestelmälle erittäin stressaavaa, mutta nykyaikaiset tietokoneet voivat tehdä sen. Muistan ennen kaikkea kalenterin kehittämisen, jolla on kyky muuttaa kuukausien ajan.!</value>
+  </data>
+  <data name="MyProjectBlitzDemo2" xml:space="preserve">
+    <value>Päätin kehittää labyrinttejä, kun se oli tylsää työssä. Päätin viihdyttää kollegoitani, mutta se osoittautui minulle eniten hauskaa, kun tajusin, että rakentaaksesi kartat nopeasti konsolin IDE: hen, kirjoita oma editori) Se oli mielenkiintoinen kokemus ja hyvä tulos!</value>
+  </data>
+  <data name="MyProjectBlitzDemo3" xml:space="preserve">
+    <value>Tämä projekti ilmestyi, kun halusin onnitella tyttöystävääni virtuaalisessa postikortissa. Päätin tuottaa ilmaisia kukkivia kukkia. Simuloi terälehtien pudotusta ohjaimella (manuaalinen hiukkasgeneraattori). Pidin kehittää varsi- ja kukkakasvujärjestelmä, joka perustuu perintöperiaatteeseen ja muuttuviin ominaisuuksiin.!</value>
+  </data>
+  <data name="MyProjectBlitzDemo4" xml:space="preserve">
+    <value>Tämä on viimeinen ja suurin kehitykseni Blitz3D-moottorissa. Täällä keksittiin monia mielenkiintoisia ratkaisuja, on sääli, että moottori on vanhentunut. Tässä projektissa kehitin päivä- ja yömuutoksen, kasvien kasvu- ja maaperän hedelmällisyysjärjestelmän, LOD: n etäältä, varjostimien käytön ja paljon muuta.</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Puhelin</value>
   </data>
   <data name="Portfolio" xml:space="preserve">
     <value>Portfolio</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Home</value>
+  <data name="RestAPIDemo1" xml:space="preserve">
+    <value>Es wurde interessant für mich, RestAPI auszuprobieren. Ich wählte das Thema - Suche nach Filmen. Weil es klar ist. In diesem Projekt habe ich viele neue Technologien verwendet, darunter: Middleware, Bootstrap, Lokalisierung (ein besonderer Dank geht an die Entwickler des &lt;a href='https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager#review-details'&gt; plugin &lt;/a&gt;), Multithread-Download einer Sammlung von Filmen. Ich habe tmdb api verwendet, es gibt eine Einschränkung (1 Anfrage enthält maximal 30 Filme). Die Verwendung von Multithreading hat die Downloadzeit erheblich verkürzt.</value>
   </data>
-  <data name="Genre" xml:space="preserve">
-    <value>Genre</value>
+  <data name="ShowMail" xml:space="preserve">
+    <value>Näytä posti</value>
   </data>
-  <data name="Years" xml:space="preserve">
-    <value>Jahre</value>
+  <data name="ShowPhone" xml:space="preserve">
+    <value>Puhelin</value>
   </data>
-  <data name="Keywords" xml:space="preserve">
-    <value>Schlüsselwörter</value>
-  </data>
-  <data name="ReleaseDate" xml:space="preserve">
-    <value>Veröffentlichungsdatum</value>
-  </data>
-  <data name="IMDBRating" xml:space="preserve">
-    <value>IMDb-Bewertung</value>
-  </data>
-  <data name="MovieSearch" xml:space="preserve">
-    <value>Filmsuche</value>
-  </data>
-  <data name="Advanced" xml:space="preserve">
-    <value>Erweitert</value>
-  </data>
-  <data name="Any" xml:space="preserve">
-    <value>Beliebig</value>
-  </data>
-  <data name="StartSearch" xml:space="preserve">
-    <value>Suche starten</value>
-  </data>
-  <data name="Year" xml:space="preserve">
-    <value>Jahr</value>
-  </data>
-  <data name="SortingLabel" xml:space="preserve">
-    <value>Sortierung</value>
-  </data>
-  <data name="PopularityDesc" xml:space="preserve">
-    <value>Popularität (absteigend)</value>
-  </data>
-  <data name="PopularityAsc" xml:space="preserve">
-    <value>Popularität (aufsteigend)</value>
-  </data>
-  <data name="DateDesc" xml:space="preserve">
-    <value>Datum (absteigend)</value>
-  </data>
-  <data name="DateAsc" xml:space="preserve">
-    <value>Datum (aufsteigend)</value>
-  </data>
-  <data name="NameDesc" xml:space="preserve">
-    <value>Name (absteigend)</value>
-  </data>
-  <data name="NameAsc" xml:space="preserve">
-    <value>Name (aufsteigend)</value>
-  </data>
-  <data name="BeginSearch" xml:space="preserve">
-    <value>Suche starten</value>
-  </data>
-  <data name="AwaitingSearching" xml:space="preserve">
-    <value>Ein bisschen Geduld suchen wir</value>
-  </data>
-  <data name="Country" xml:space="preserve">
-    <value>Land</value>
-  </data>
-  <data name="Back" xml:space="preserve">
-    <value>Zurück</value>
-  </data>
-  <data name="Average_vote" xml:space="preserve">
-    <value>Abstimmen </value>
-  </data>
-  <data name="Runtime" xml:space="preserve">
-    <value>Dauer</value>
-  </data>
-  <data name="Homepage" xml:space="preserve">
-    <value>Startseite</value>
-  </data>
-  <data name="Companies" xml:space="preserve">
-    <value>Firmen</value>
-  </data>
-  <data name="Number_of_votes" xml:space="preserve">
-    <value>Anzahl der Stimmen</value>
+  <data name="About" xml:space="preserve">
+    <value>Itsestäni</value>
   </data>
 </root>

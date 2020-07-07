@@ -117,91 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Genres" xml:space="preserve">
-    <value>Genre</value>
+  <data name="About" xml:space="preserve">
+    <value>ÜbER MICH</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Kontakte</value>
+  </data>
+  <data name="DownloadApp" xml:space="preserve">
+    <value>App herunterladen</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Gehe zur Seite</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Privat</value>
+  </data>
+  <data name="Mail" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Ich heiße Aleksey. Ich programmiere gerne und entwickle mich ständig in diese Richtung. Meine Anziehungskraft für das Programmieren begann mit dem Informatikunterricht in der Schule, dann studierte ich am Institut der Fakultät für Informatik. &lt;br /&gt;</value>
+  </data>
+  <data name="MyProjectBlitzDemo1" xml:space="preserve">
+    <value>Ein guter Bildschirmschoner stellte sich zum Zeitpunkt des Studiums des Motors heraus. Das Aufnehmen eines Frames auf Blitz3d ist für das System sehr stressig, aber moderne PCs können dies. Am allermeisten erinnere ich mich an die Entwicklung eines Kalenders mit der Fähigkeit, die Monate umzudrehen.!</value>
+  </data>
+  <data name="MyProjectBlitzDemo2" xml:space="preserve">
+    <value>Ich beschloss, Labyrinthe zu entwickeln, wenn es bei der Arbeit langweilig war. Ich habe beschlossen, meine Kollegen zu unterhalten, aber es hat mir am meisten Spaß gemacht, als mir klar wurde, dass es eine interessante Erfahrung und ein gutes Ergebnis war, schnell Karten auf der Konsolen-IDE zu erstellen, einen eigenen Editor zu schreiben.</value>
+  </data>
+  <data name="MyProjectBlitzDemo3" xml:space="preserve">
+    <value>Dieses Projekt erschien, als ich meiner Freundin zu einer virtuellen Postkarte gratulieren wollte. Ich beschloss, frei blühende Blumen zu erzeugen. Simulierte den Fall der Blütenblätter durch die Steuerung (manueller Partikelgenerator). Ich habe gern ein System für das Wachstum von Stielen und Blüten entwickelt, das auf dem Prinzip des Erbes und der Veränderung der Eigenschaften basiert.!</value>
+  </data>
+  <data name="MyProjectBlitzDemo4" xml:space="preserve">
+    <value>Dies ist meine letzte und größte Entwicklung an der Blitz3D-Engine. Hier wurden viele interessante Lösungen erfunden, schade, dass der Motor veraltet ist. In diesem Projekt entwickelte ich eine Veränderung von Tag und Nacht, ein System des Pflanzenwachstums und der Bodenfruchtbarkeit, LOD aus der Ferne, den Einsatz von Shadern und vieles mehr.!</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefon</value>
   </data>
   <data name="Portfolio" xml:space="preserve">
     <value>Portfolio</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Home</value>
+  <data name="RestAPIDemo1" xml:space="preserve">
+    <value>Es wurde interessant für mich, RestAPI auszuprobieren. Ich wählte das Thema - Suche nach Filmen. Weil es klar ist. In diesem Projekt habe ich viele neue Technologien verwendet, darunter: Middleware, Bootstrap, Lokalisierung (ein besonderer Dank geht an die Entwickler des &lt;a href='https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager#review-details'&gt; plugin &lt;/a&gt;), Multithread-Download einer Sammlung von Filmen. Ich habe tmdb api verwendet, es gibt eine Einschränkung (1 Anfrage enthält maximal 30 Filme). Die Verwendung von Multithreading hat die Downloadzeit erheblich verkürzt.</value>
   </data>
-  <data name="Genre" xml:space="preserve">
-    <value>Genre</value>
+  <data name="ShowMail" xml:space="preserve">
+    <value>E-Mail anzeigen</value>
   </data>
-  <data name="Years" xml:space="preserve">
-    <value>Jahre</value>
-  </data>
-  <data name="Keywords" xml:space="preserve">
-    <value>Schlüsselwörter</value>
-  </data>
-  <data name="ReleaseDate" xml:space="preserve">
-    <value>Veröffentlichungsdatum</value>
-  </data>
-  <data name="IMDBRating" xml:space="preserve">
-    <value>IMDb-Bewertung</value>
-  </data>
-  <data name="MovieSearch" xml:space="preserve">
-    <value>Filmsuche</value>
-  </data>
-  <data name="Advanced" xml:space="preserve">
-    <value>Erweitert</value>
-  </data>
-  <data name="Any" xml:space="preserve">
-    <value>Beliebig</value>
-  </data>
-  <data name="StartSearch" xml:space="preserve">
-    <value>Suche starten</value>
-  </data>
-  <data name="Year" xml:space="preserve">
-    <value>Jahr</value>
-  </data>
-  <data name="SortingLabel" xml:space="preserve">
-    <value>Sortierung</value>
-  </data>
-  <data name="PopularityDesc" xml:space="preserve">
-    <value>Popularität (absteigend)</value>
-  </data>
-  <data name="PopularityAsc" xml:space="preserve">
-    <value>Popularität (aufsteigend)</value>
-  </data>
-  <data name="DateDesc" xml:space="preserve">
-    <value>Datum (absteigend)</value>
-  </data>
-  <data name="DateAsc" xml:space="preserve">
-    <value>Datum (aufsteigend)</value>
-  </data>
-  <data name="NameDesc" xml:space="preserve">
-    <value>Name (absteigend)</value>
-  </data>
-  <data name="NameAsc" xml:space="preserve">
-    <value>Name (aufsteigend)</value>
-  </data>
-  <data name="BeginSearch" xml:space="preserve">
-    <value>Suche starten</value>
-  </data>
-  <data name="AwaitingSearching" xml:space="preserve">
-    <value>Ein bisschen Geduld suchen wir</value>
-  </data>
-  <data name="Country" xml:space="preserve">
-    <value>Land</value>
-  </data>
-  <data name="Back" xml:space="preserve">
-    <value>Zurück</value>
-  </data>
-  <data name="Average_vote" xml:space="preserve">
-    <value>Abstimmen </value>
-  </data>
-  <data name="Runtime" xml:space="preserve">
-    <value>Dauer</value>
-  </data>
-  <data name="Homepage" xml:space="preserve">
-    <value>Startseite</value>
-  </data>
-  <data name="Companies" xml:space="preserve">
-    <value>Firmen</value>
-  </data>
-  <data name="Number_of_votes" xml:space="preserve">
-    <value>Anzahl der Stimmen</value>
+  <data name="ShowPhone" xml:space="preserve">
+    <value>Telefonnummer anzeigen</value>
   </data>
 </root>

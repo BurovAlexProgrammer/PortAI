@@ -117,91 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Genres" xml:space="preserve">
-    <value>Genre</value>
+  <data name="About" xml:space="preserve">
+    <value>à propos de moi / concernant moi /  à mon propos / un peu sur moi</value>
   </data>
-  <data name="Portfolio" xml:space="preserve">
-    <value>Portfolio</value>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="DownloadApp" xml:space="preserve">
+    <value>Télécharger l'application</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Aller à la page</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Accueil</value>
   </data>
-  <data name="Genre" xml:space="preserve">
-    <value>Genre</value>
+  <data name="Mail" xml:space="preserve">
+    <value>Courrier</value>
   </data>
-  <data name="Years" xml:space="preserve">
-    <value>Jahre</value>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Je m'appelle Aleksey. J'aime programmer et je me développe constamment dans cette direction. Mon attrait pour la programmation a commencé avec des cours d'informatique à l'école, puis je suis allé étudier à l'institut à la faculté d'informatique. &lt;br /&gt;</value>
   </data>
-  <data name="Keywords" xml:space="preserve">
-    <value>Schlüsselwörter</value>
+  <data name="MyProjectBlitzDemo1" xml:space="preserve">
+    <value>Un bon économiseur d&amp;#39;écran s&amp;#39;est avéré au moment d&amp;#39;étudier le moteur. La capture d&amp;#39;un cadre sur Blitz3d est très stressante pour le système, mais les PC modernes peuvent le faire. Je me souviens surtout du développement d&amp;#39;un calendrier avec la possibilité de tourner au fil des mois.!</value>
   </data>
-  <data name="ReleaseDate" xml:space="preserve">
-    <value>Veröffentlichungsdatum</value>
+  <data name="MyProjectBlitzDemo2" xml:space="preserve">
+    <value>J&amp;#39;ai décidé de développer des labyrinthes quand c&amp;#39;était ennuyeux au travail. J&amp;#39;ai décidé de divertir mes collègues, mais cela s&amp;#39;est avéré être le plus amusant pour moi quand j&amp;#39;ai réalisé que construire rapidement des cartes sur la console IDE, écrire votre propre éditeur) C&amp;#39;était une expérience intéressante et un bon résultat.!</value>
   </data>
-  <data name="IMDBRating" xml:space="preserve">
-    <value>IMDb-Bewertung</value>
+  <data name="MyProjectBlitzDemo3" xml:space="preserve">
+    <value>Ce projet est apparu lorsque j&amp;#39;ai voulu féliciter ma petite amie pour une carte postale virtuelle. J&amp;#39;ai décidé de générer des fleurs à floraison gratuite. Simulation de la chute des pétales par le contrôleur (générateur de particules manuel). J&amp;#39;ai aimé développer un système de croissance des tiges et des fleurs basé sur le principe du patrimoine et des caractéristiques changeantes.!</value>
   </data>
-  <data name="MovieSearch" xml:space="preserve">
-    <value>Filmsuche</value>
+  <data name="MyProjectBlitzDemo4" xml:space="preserve">
+    <value>C&amp;#39;est mon dernier et plus grand développement sur le moteur Blitz3D. De nombreuses solutions intéressantes ont été inventées ici, c&amp;#39;est dommage que le moteur soit dépassé. Dans ce projet, j&amp;#39;ai développé un changement de jour et de nuit, un système de croissance des plantes et de fertilité des sols, une LOD à distance, l&amp;#39;utilisation de shaders et bien plus encore.!</value>
   </data>
-  <data name="Advanced" xml:space="preserve">
-    <value>Erweitert</value>
+  <data name="Phone" xml:space="preserve">
+    <value>Téléphone</value>
   </data>
-  <data name="Any" xml:space="preserve">
-    <value>Beliebig</value>
+  <data name="Portfolio" xml:space="preserve">
+    <value>Portefeuille</value>
   </data>
-  <data name="StartSearch" xml:space="preserve">
-    <value>Suche starten</value>
+  <data name="RestAPIDemo1" xml:space="preserve">
+    <value>Il est devenu intéressant pour moi d'essayer RestAPI, j'ai choisi le sujet - Rechercher des films. Parce que c'est clair. Dans ce projet, j'ai utilisé de nombreuses technologies nouvelles pour moi, à savoir: middleware, bootstrap, localisation (merci spécial aux développeurs de &lt;a href='https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager#review-details'&gt; plugin &lt;/a&gt;), téléchargement multithread d'une collection de films. J'ai utilisé l'api tmdb, il a une limitation (1 requête contient un maximum de 30 films) l'utilisation du multithreading a considérablement réduit le temps de téléchargement.</value>
   </data>
-  <data name="Year" xml:space="preserve">
-    <value>Jahr</value>
+  <data name="ShowMail" xml:space="preserve">
+    <value>Afficher le courrier</value>
   </data>
-  <data name="SortingLabel" xml:space="preserve">
-    <value>Sortierung</value>
-  </data>
-  <data name="PopularityDesc" xml:space="preserve">
-    <value>Popularität (absteigend)</value>
-  </data>
-  <data name="PopularityAsc" xml:space="preserve">
-    <value>Popularität (aufsteigend)</value>
-  </data>
-  <data name="DateDesc" xml:space="preserve">
-    <value>Datum (absteigend)</value>
-  </data>
-  <data name="DateAsc" xml:space="preserve">
-    <value>Datum (aufsteigend)</value>
-  </data>
-  <data name="NameDesc" xml:space="preserve">
-    <value>Name (absteigend)</value>
-  </data>
-  <data name="NameAsc" xml:space="preserve">
-    <value>Name (aufsteigend)</value>
-  </data>
-  <data name="BeginSearch" xml:space="preserve">
-    <value>Suche starten</value>
-  </data>
-  <data name="AwaitingSearching" xml:space="preserve">
-    <value>Ein bisschen Geduld suchen wir</value>
-  </data>
-  <data name="Country" xml:space="preserve">
-    <value>Land</value>
-  </data>
-  <data name="Back" xml:space="preserve">
-    <value>Zurück</value>
-  </data>
-  <data name="Average_vote" xml:space="preserve">
-    <value>Abstimmen </value>
-  </data>
-  <data name="Runtime" xml:space="preserve">
-    <value>Dauer</value>
-  </data>
-  <data name="Homepage" xml:space="preserve">
-    <value>Startseite</value>
-  </data>
-  <data name="Companies" xml:space="preserve">
-    <value>Firmen</value>
-  </data>
-  <data name="Number_of_votes" xml:space="preserve">
-    <value>Anzahl der Stimmen</value>
+  <data name="ShowPhone" xml:space="preserve">
+    <value>Afficher le téléphone</value>
   </data>
 </root>

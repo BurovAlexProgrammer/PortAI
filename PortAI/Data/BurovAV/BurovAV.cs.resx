@@ -117,91 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Genres" xml:space="preserve">
-    <value>Genre</value>
+  <data name="About" xml:space="preserve">
+    <value>O nás</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Kontakty</value>
+  </data>
+  <data name="DownloadApp" xml:space="preserve">
+    <value>Stáhnout aplikaci</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Prejít na stránku</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Domů</value>
+  </data>
+  <data name="Mail" xml:space="preserve">
+    <value>Pošta</value>
+  </data>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Jmenuji se Aleksey. Rád programuji a neustále se vyvíjím tímto směrem. Moje přitažlivost k programování začala lekcemi informatiky ve škole, pak jsem šel studovat na ústav na fakultě informatiky. &lt;br /&gt;</value>
+  </data>
+  <data name="MyProjectBlitzDemo1" xml:space="preserve">
+    <value>V době studia motoru se ukázalo dobré spořič obrazovky. Pořízení snímku na Blitz3d je pro systém velmi stresující, ale moderní PC to zvládne. Ze všeho nejvíc si pamatuji vývoj kalendáře se schopností střídat měsíce.!</value>
+  </data>
+  <data name="MyProjectBlitzDemo2" xml:space="preserve">
+    <value>Když jsem v práci nudil, rozhodl jsem se vyvinout labyrinty. Rozhodl jsem se pobavit své kolegy, ale ukázalo se, že pro mě bylo nejzábavnější, když jsem si uvědomil, že rychle vytvářet mapy na konzoli IDE, napsat svůj vlastní editor) Byl to zajímavý zážitek a dobrý výsledek.!</value>
+  </data>
+  <data name="MyProjectBlitzDemo3" xml:space="preserve">
+    <value>Tento projekt se objevil, když jsem chtěl poblahopřát své přítelkyni k virtuální pohlednici. Rozhodl jsem se vytvořit kvetoucí květiny zdarma. Simuloval pád okvětních lístků ovladačem (ruční generátor částic). Ráda jsem vyvinula systém růstu stonků a květů založený na principu dědictví a měnících se charakteristik.!</value>
+  </data>
+  <data name="MyProjectBlitzDemo4" xml:space="preserve">
+    <value>Toto je můj poslední a největší vývoj na motoru Blitz3D. Bylo zde objeveno mnoho zajímavých řešení, je škoda, že je motor zastaralý. V tomto projektu jsem vyvinul změnu dne i noci, systém růstu rostlin a úrodnosti půdy, LOD z dálky, použití shaderů a mnohem více.!</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefon</value>
   </data>
   <data name="Portfolio" xml:space="preserve">
     <value>Portfolio</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Home</value>
+  <data name="RestAPIDemo1" xml:space="preserve">
+    <value>Bylo pro mě zajímavé vyzkoušet RestAPI, vybral jsem téma - Hledání filmů. Protože je to jasné. V tomto projektu jsem použil mnoho nových technologií, a to: middleware, bootstrap, lokalizace (speciální díky vývojářům &lt;a href='https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager#review-details'&gt; plugin &lt;/a&gt;), stažení kolekce filmů s více vlákny. Použil jsem tmdb API, má omezení (1 žádost obsahuje maximálně 30 filmů) použití multithreadingu výrazně zkrátilo dobu stahování.</value>
   </data>
-  <data name="Genre" xml:space="preserve">
-    <value>Genre</value>
+  <data name="ShowMail" xml:space="preserve">
+    <value>Zobrazit poštu</value>
   </data>
-  <data name="Years" xml:space="preserve">
-    <value>Jahre</value>
-  </data>
-  <data name="Keywords" xml:space="preserve">
-    <value>Schlüsselwörter</value>
-  </data>
-  <data name="ReleaseDate" xml:space="preserve">
-    <value>Veröffentlichungsdatum</value>
-  </data>
-  <data name="IMDBRating" xml:space="preserve">
-    <value>IMDb-Bewertung</value>
-  </data>
-  <data name="MovieSearch" xml:space="preserve">
-    <value>Filmsuche</value>
-  </data>
-  <data name="Advanced" xml:space="preserve">
-    <value>Erweitert</value>
-  </data>
-  <data name="Any" xml:space="preserve">
-    <value>Beliebig</value>
-  </data>
-  <data name="StartSearch" xml:space="preserve">
-    <value>Suche starten</value>
-  </data>
-  <data name="Year" xml:space="preserve">
-    <value>Jahr</value>
-  </data>
-  <data name="SortingLabel" xml:space="preserve">
-    <value>Sortierung</value>
-  </data>
-  <data name="PopularityDesc" xml:space="preserve">
-    <value>Popularität (absteigend)</value>
-  </data>
-  <data name="PopularityAsc" xml:space="preserve">
-    <value>Popularität (aufsteigend)</value>
-  </data>
-  <data name="DateDesc" xml:space="preserve">
-    <value>Datum (absteigend)</value>
-  </data>
-  <data name="DateAsc" xml:space="preserve">
-    <value>Datum (aufsteigend)</value>
-  </data>
-  <data name="NameDesc" xml:space="preserve">
-    <value>Name (absteigend)</value>
-  </data>
-  <data name="NameAsc" xml:space="preserve">
-    <value>Name (aufsteigend)</value>
-  </data>
-  <data name="BeginSearch" xml:space="preserve">
-    <value>Suche starten</value>
-  </data>
-  <data name="AwaitingSearching" xml:space="preserve">
-    <value>Ein bisschen Geduld suchen wir</value>
-  </data>
-  <data name="Country" xml:space="preserve">
-    <value>Land</value>
-  </data>
-  <data name="Back" xml:space="preserve">
-    <value>Zurück</value>
-  </data>
-  <data name="Average_vote" xml:space="preserve">
-    <value>Abstimmen </value>
-  </data>
-  <data name="Runtime" xml:space="preserve">
-    <value>Dauer</value>
-  </data>
-  <data name="Homepage" xml:space="preserve">
-    <value>Startseite</value>
-  </data>
-  <data name="Companies" xml:space="preserve">
-    <value>Firmen</value>
-  </data>
-  <data name="Number_of_votes" xml:space="preserve">
-    <value>Anzahl der Stimmen</value>
+  <data name="ShowPhone" xml:space="preserve">
+    <value>Telefon</value>
   </data>
 </root>
