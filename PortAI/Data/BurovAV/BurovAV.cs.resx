@@ -135,9 +135,6 @@
   <data name="Mail" xml:space="preserve">
     <value>Pošta</value>
   </data>
-  <data name="MyBiography" xml:space="preserve">
-    <value>Jmenuji se Aleksey. Rád programuji a neustále se vyvíjím tímto směrem. Moje přitažlivost k programování začala lekcemi informatiky ve škole, pak jsem šel studovat na ústav na fakultě informatiky. &lt;br /&gt;</value>
-  </data>
   <data name="MyProjectBlitzDemo1" xml:space="preserve">
     <value>V době studia motoru se ukázalo dobré spořič obrazovky. Pořízení snímku na Blitz3d je pro systém velmi stresující, ale moderní PC to zvládne. Ze všeho nejvíc si pamatuji vývoj kalendáře se schopností střídat měsíce.!</value>
   </data>
@@ -164,5 +161,8 @@
   </data>
   <data name="ShowPhone" xml:space="preserve">
     <value>Telefon</value>
+  </data>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Jmenuji se Aleksey. Rád programuji a neustále se vyvíjím tímto směrem. Moje přitažlivost k programování začala lekcemi informatiky ve škole, pak jsem šel studovat na ústav na fakultě informatiky. &lt;br /&gt;</value>
   </data>
 </root>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>à propos de moi / concernant moi /  à mon propos / un peu sur moi</value>
+    <value>À propos de moi</value>
   </data>
   <data name="Contacts" xml:space="preserve">
     <value>Contacts</value>
@@ -134,9 +134,6 @@
   </data>
   <data name="Mail" xml:space="preserve">
     <value>Courrier</value>
-  </data>
-  <data name="MyBiography" xml:space="preserve">
-    <value>Je m'appelle Aleksey. J'aime programmer et je me développe constamment dans cette direction. Mon attrait pour la programmation a commencé avec des cours d'informatique à l'école, puis je suis allé étudier à l'institut à la faculté d'informatique. &lt;br /&gt;</value>
   </data>
   <data name="MyProjectBlitzDemo1" xml:space="preserve">
     <value>Un bon économiseur d&amp;#39;écran s&amp;#39;est avéré au moment d&amp;#39;étudier le moteur. La capture d&amp;#39;un cadre sur Blitz3d est très stressante pour le système, mais les PC modernes peuvent le faire. Je me souviens surtout du développement d&amp;#39;un calendrier avec la possibilité de tourner au fil des mois.!</value>
@@ -164,5 +161,8 @@
   </data>
   <data name="ShowPhone" xml:space="preserve">
     <value>Afficher le téléphone</value>
+  </data>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Je m'appelle Aleksey. J'aime programmer et je me développe constamment dans cette direction. Mon attrait pour la programmation a commencé avec des cours d'informatique à l'école, puis je suis allé étudier à l'institut à la faculté d'informatique. &lt;br /&gt;</value>
   </data>
 </root>

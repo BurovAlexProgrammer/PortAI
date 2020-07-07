@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>ÜbER MICH</value>
+    <value>Über mich</value>
   </data>
   <data name="Contacts" xml:space="preserve">
     <value>Kontakte</value>
@@ -134,9 +134,6 @@
   </data>
   <data name="Mail" xml:space="preserve">
     <value>E-Mail</value>
-  </data>
-  <data name="MyBiography" xml:space="preserve">
-    <value>Ich heiße Aleksey. Ich programmiere gerne und entwickle mich ständig in diese Richtung. Meine Anziehungskraft für das Programmieren begann mit dem Informatikunterricht in der Schule, dann studierte ich am Institut der Fakultät für Informatik. &lt;br /&gt;</value>
   </data>
   <data name="MyProjectBlitzDemo1" xml:space="preserve">
     <value>Ein guter Bildschirmschoner stellte sich zum Zeitpunkt des Studiums des Motors heraus. Das Aufnehmen eines Frames auf Blitz3d ist für das System sehr stressig, aber moderne PCs können dies. Am allermeisten erinnere ich mich an die Entwicklung eines Kalenders mit der Fähigkeit, die Monate umzudrehen.!</value>
@@ -164,5 +161,8 @@
   </data>
   <data name="ShowPhone" xml:space="preserve">
     <value>Telefonnummer anzeigen</value>
+  </data>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Ich heiße Aleksey. Ich programmiere gerne und entwickle mich ständig in diese Richtung. Meine Anziehungskraft für das Programmieren begann mit dem Informatikunterricht in der Schule, dann studierte ich am Institut der Fakultät für Informatik. &lt;br /&gt;</value>
   </data>
 </root>

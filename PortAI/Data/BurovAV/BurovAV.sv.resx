@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>OM MIG SJÄLV</value>
+    <value>Om mig själv</value>
   </data>
   <data name="Contacts" xml:space="preserve">
     <value>Kontakter</value>
@@ -135,9 +135,6 @@
   </data>
   <data name="Mail" xml:space="preserve">
     <value>E-post</value>
-  </data>
-  <data name="MyBiography" xml:space="preserve">
-    <value>Jag heter Aleksey. Jag gillar att programmera och utvecklas ständigt i denna riktning. Min attraktion för programmering började med datavetenskapslektioner i skolan, sedan gick jag för att studera vid institutet vid fakulteten för datavetenskap. &lt;br /&gt;</value>
   </data>
   <data name="MyProjectBlitzDemo1" xml:space="preserve">
     <value>En bra skärmsläckare visade sig när man studerade motorn. Att fånga en ram på Blitz3d är mycket stressande för systemet, men moderna datorer kan göra det. Mest av allt minns jag utvecklingen av en kalender med förmågan att vända över månaderna.!</value>
@@ -165,5 +162,8 @@
   </data>
   <data name="ShowPhone" xml:space="preserve">
     <value>Visa telefon</value>
+  </data>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Jag heter Aleksey. Jag gillar att programmera och utvecklas ständigt i denna riktning. Min attraktion för programmering började med datavetenskapslektioner i skolan, sedan gick jag för att studera vid institutet vid fakulteten för datavetenskap. &lt;br /&gt;</value>
   </data>
 </root>

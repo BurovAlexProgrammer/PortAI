@@ -132,9 +132,6 @@
   <data name="Mail" xml:space="preserve">
     <value>Posti</value>
   </data>
-  <data name="MyBiography" xml:space="preserve">
-    <value>Ich heiße Aleksey. Ich programmiere gerne und entwickle mich ständig in diese Richtung. Meine Anziehungskraft für das Programmieren begann mit dem Informatikunterricht in der Schule, dann studierte ich am Institut der Fakultät für Informatik. &lt;br /&gt;</value>
-  </data>
   <data name="MyProjectBlitzDemo1" xml:space="preserve">
     <value>Hyvä näytönsäästäjä osoittautui moottoria tutkittaessa. Kehyksen kaappaaminen Blitz3d: lle on järjestelmälle erittäin stressaavaa, mutta nykyaikaiset tietokoneet voivat tehdä sen. Muistan ennen kaikkea kalenterin kehittämisen, jolla on kyky muuttaa kuukausien ajan.!</value>
   </data>
@@ -164,5 +161,8 @@
   </data>
   <data name="About" xml:space="preserve">
     <value>Itsestäni</value>
+  </data>
+  <data name="MyBiography" xml:space="preserve">
+    <value>Nimeni on Aleksey. Pidän ohjelmoinnista ja kehitän jatkuvasti tähän suuntaan. Houkutteluni ohjelmointiin alkoi tietojenkäsittelytunneilla koulussa, sitten menin opiskelemaan laitokselle tietotekniikan tiedekunnassa. &lt;br /&gt;</value>
   </data>
 </root>
