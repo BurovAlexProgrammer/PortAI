@@ -1,22 +1,79 @@
-﻿
+﻿@using PortAI.Custom;
 @{
     ViewData["Title"] = "Portfolio";
-    Layout = "~/Views/Shared/_BurovavLayout.cshtml";
+ Layout = "~/Views/Shared/_BurovavLayout.cshtml";
 }
 
 <h1>Portfolio</h1>
 
-<table>
-    <tbody>
-        <tr>
-            <td rowspan="2">
-                <a href="http://burovalex.portai.ru"><img src="~/img/burovav_project1_img1.png" height="100px" class="m-2 mr-4" /></a>
-            </td>
-            <td><label class="h5 text-uppercase pr-5 mb-2">Project <label class="h5 text-success font-weight-bold">C#</label> <label class="h5 text-success">Core 2.2 MVC</label><label class="h5 text-black-50">&nbsp;SQL&nbsp;</label><label class="h5 text-secondary">jQuery Bootstrap</label></label></td>
-        </tr>
-        <tr>
-            <td><label class="h6">A description of the project will appear here. <br/> It can be multi-line text.</label> </td>
+<table style="border-spacing: 0 36px; border-collapse: separate">
+    <tr>
+        <td>
+            <p class="h5" style="line-height:1.8">
+                <a href="http://burovalex.portai.ru/RestAPI/Home" class="float-left">
+                    <img src="~/img/burovav_project1_img1.png" width="200" height="150px" class="m-2 mr-4" />
+                </a>
+                <label class="h5 pr-5 mb-2 font-weight-bold">RestAPI Demo - <label class="h5 text-success font-weight-bold">C#</label> <label class="h5 text-success">RestAPI</label><label class="h5 text-secondary">&nbsp;jQuery Bootstrap</label></label><br />
+                Development is underway.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="h5" style="line-height:1.8">
+                <a href="http://burovalex.portai.ru" class="float-left">
+                    <img src="~/img/burovav_project1_img1.png" width="200" height="150px" class="m-2 mr-4" />
+                </a>
+                <label class="h5 pr-5 mb-2 font-weight-bold">ASP Net Core Demo - <label class="h5 text-success font-weight-bold">C#</label> <label class="h5 text-success">Core 2.2 MVC</label><label class="h5 text-black-50">&nbsp;SQL&nbsp;</label><label class="h5 text-secondary">jQuery Bootstrap</label></label><br />
+                Development is underway.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="h5" style="line-height:1.8">
+                <img src="~/burovav/island_screenshot.png" width="200" height="150" class="m-2 mr-4 float-left" />
+                <label class="h5 pr-5 mb-2 font-weight-bold">Blitz3D Demo4 - <label class="h5 text-success font-weight-bold">Blitz BASIC</label> <label class="h5 text-success">Blitz3D</label><label class="h5 text-black-50">&nbsp; GameDev &nbsp;</label></label> <br />
+                <!--Это последняя и самая большая моя разработка на движке Blitz3D. Здесь было придумано много интересных решений, жаль что движок устарел. В этом проекте я разработал смену дня и ночи, систему роста растений и плодородности почвы, LOD от расстояния, использование шейдеров и многое другое.-->
+                This is my last and largest development on the Blitz3D engine. Many interesting solutions were invented here, it is a pity that the engine is outdated. In this project, I developed a change of day and night, a system of plant growth and soil fertility, LOD from a distance, the use of shaders and much more.
+            </p>
+            <a href='~/burovav/Island.rar' class="float-right"> <img src='~/img/winrar_icon.png' width='32' height='32' /> Download app (rar)</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="h5" style="line-height:1.8">
+                <img src="~/burovav/8march_screenshot.png" width="200" height="150" class="m-2 mr-4 float-left" style="background-color:aquamarine" />
+                <label class="h5 pr-5 mb-2 font-weight-bold">Blitz3D Demo3 - <label class="h5 text-success font-weight-bold">Blitz BASIC</label> <label class="h5 text-success">Blitz3D</label><label class="h5 text-black-50">&nbsp;3D modeling&nbsp;</label><label class="h5 text-secondary"> Texture mapping</label></label> <br />
+                <!--  Этот проект появился когда я захотел поздравить свою девушку виртуальной открыткой. Я решил генерировать рост цветков в произвольной форме. Имитировал падение лепестков контроллером (ручной генератор частиц). Мне понравилось разрабатывать систему роста стебля и цветков по принципу наследия и изменения характеристик.-->
+                This project appeared when I wanted to congratulate my girlfriend on a virtual postcard. I decided to generate free flowering flowers. Simulated the fall of the petals by the controller (manual particle generator). I liked to develop a system of stem and flower growth based on the principle of heritage and changing characteristics.
+            </p>
+            <a href='~/burovav/8March.rar' class="float-right"> <img src='~/img/winrar_icon.png' width='32' height='32' /> Download app (rar)</a> <br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="h5" style="line-height:1.8">
+                <img src="~/burovav/labi_screenshot.png" width="200" height="150" class="m-2 mr-4 float-left" style="background-color:aquamarine" />
+                <label class="h5 pr-5 mb-2 font-weight-bold">Blitz3D Demo2 - <label class="h5 text-success font-weight-bold">Blitz BASIC</label> <label class="h5 text-success">Blitz3D</label><label class="h5 text-black-50">&nbsp; Сustom editor creation &nbsp;</label><label class="h5 text-secondary"> Work with the collider.</label></label><br />
+                <!-- Лабиринты я решил разработать, когда на работе было скучно. Решил развлечь коллег, но веселее всего оказалось мне, когда я понял что для быстрого построения карт на консольной IDE - это написать свой редактор)
+                Это был интересный опыт и неплохой результат. -->
+                I decided to develop labyrinths when it was boring at work. I decided to entertain my colleagues, but it turned out to be the most fun for me when I realized that to quickly build maps on the console IDE, write your own editor)
+                It was an interesting experience and a good result.
+            </p>
+            <a href='~/burovav/Labi.rar' class="float-right"> <img src='~/img/winrar_icon.png' width='32' height='32' /> Download app (rar)</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="h5" style="line-height:1.8">
+                <img src="~/burovav/clock_screenshot.png" width="200" height="150" class="m-2 mr-4 float-left" style="background-color:aquamarine" />
+                <label class="h5 pr-5 mb-2 font-weight-bold">Blitz3D Demo - <label class="h5 text-success font-weight-bold">Blitz BASIC</label> <label class="h5 text-success">Blitz3D</label><label class="h5 text-black-50">&nbsp; 3D Modelling &nbsp;</label><label class="h5 text-secondary"> Work with the render</label></label> <br />
+                <!--  Неплохая заставка получилась в момент изучения движка. Захват фрейма на Blitz3d очень сильно нагружает систему, но современные ПК справляются. Мне больше всего запомнилась разработка календаря с вожможностью перелистывать месяцы.-->
+                A good screensaver turned out at the time of studying the engine. Capturing a frame on Blitz3d is very stressful for the system, but modern PCs can do it. Most of all I remember the development of a calendar with the ability to turn over the months.
+            </p>
+            <a href='~/burovav/clock.rar' class="float-right"> <img src='~/img/winrar_icon.png' width='32' height='32' /> Download app (rar)</a>
+        </td>
+    </tr>
 
-        </tr>
-    </tbody>
 </table>

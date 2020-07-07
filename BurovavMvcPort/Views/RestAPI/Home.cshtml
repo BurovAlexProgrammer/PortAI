@@ -1,0 +1,235 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_LayoutRestAPI.cshtml";
+    string currentYear = DateTime.Now.Year.ToString();
+}
+
+<div class="row">
+    <h1 class="pl-5">@Resources.Resource.MovieSearch</h1>
+</div>
+<form method="post">
+    <div class="row mt-4">
+        <div class="col-3">
+            <div class="form-group" style="display:none">
+                <input type="button" class="btn btn-block btn-danger" value="Test" onclick="Test();" />
+            </div>
+
+            <div class="form-group">
+                <input type="button" class="btn btn-block btn-primary" id="startSearchButton" value=@Resources.Resource.StartSearch onclick="StarSearch()" />
+            </div>
+
+            <div class="form-group">
+                @Html.TextBox("searchText", "", htmlAttributes: new { @type = "search", @class = "form-control", @placeholder = Resources.Resource.Keywords })
+            </div>
+
+            <div class="form-group">
+                <label for="sortingText">@Resources.Resource.SortingLabel</label>
+                <select class="form-control" id="sortingSelect" name="genreSelect">
+                    <option value="popularDesc">@Resources.Resource.PopularityDesc</option>
+                    <option value="popularAsc">@Resources.Resource.PopularityAsc</option>
+                    <option value="dateDesc">@Resources.Resource.DateDesc</option>
+                    <option value="dateAsc">@Resources.Resource.DateAsc</option>
+                    <option value="nameDesc">@Resources.Resource.NameDesc</option>
+                    <option value="nameAsc">@Resources.Resource.NameAsc</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <div class="custom-control custom-switch">
+                    @Html.CheckBox("showAdvanceSearchToggle", false, htmlAttributes: new { @class = "custom-control-input", @onchange = "SwitchDisplayAdvanceSearchPanel();" })
+                    <label class="custom-control-label" for="showAdvanceSearchToggle">@Resources.Resource.Advanced</label>
+                </div>
+            </div>
+
+            <div id="leftExtendedPanel" style="display:none">
+                <div class="form-group">
+                    <label for="genreSelect">@Resources.Resource.Genre</label>
+                    @Html.DropDownList("genreSelect", new SelectList(""), htmlAttributes: new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    <label for="yearInputGroup">@Resources.Resource.ReleaseDate</label>
+                    <div class="input-group" id="yearsInputGroup">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">@Resources.Resource.Year</span>
+                        </div>
+                        @Html.Editor("year", new { htmlAttributes = new { @class = "form-control", @type = "number", @min = "1895", @max = currentYear, @step = "1" } })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">@Resources.Resource.IMDBRating</label>
+                    @Html.DropDownList("voteSelect", new SelectList(new string[] { Resources.Resource.Any, "3", "4", "5", "6", "7", "8" }), htmlAttributes: new { @class = "form-control" })
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-9">
+            <div id="resultContainer" class="row"></div>
+            <div id="messagePanel">
+                <label id="messageLabel" class="h1"></label>
+                <label id="advancedMessageLabel" class="h3"></label>
+            </div>
+            <div id="hiddenContainer" style="visibility:collapse;">
+                <div id="templateCard" class="card btn-block btn-primary bg-dark col-auto m-1 p-o" style="width: 16rem;">
+                    <a href="#" class="model_link_more btn btn-dark mt-3 mb-3 p-0">
+                        <img class="card-img-top model_poster_path" src="~/img/movie_dark8.png" alt="">
+                    </a>
+                    <div class="card-body p-1">
+                        <h5 class="card-title model_title">Card title</h5>
+                        <label class="text-secondary model_year">year</label>
+                        <p class="card-text model_overview m-0 p-0">...</p>
+
+                    </div>
+                    <label id="templateCard_title" class="hidden"></label>
+                    <label id="templateCard_id" class="hidden"></label>
+                </div>
+            </div>
+        </div>
+     </div>
+</form>
+<div class="row">
+    
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Получение списка жанров
+        getGenresList();
+        ShowMessagePanel();
+        SetMessage('@Resources.Resource.BeginSearch');
+
+        //Блокировка кнопки при пустом поле поиска
+        $('#searchText').keyup(function () {
+            if ($(this).val() == '') {
+                Disable('#startSearchButton');
+            } else {
+                Enable('#startSearchButton');
+            }
+        });
+        $('#searchText').keyup();
+    });
+
+    function Disable(el) {
+        $('#startSearchButton').prop('disabled', true);
+    }
+
+    function Enable(el) {
+        $('#startSearchButton').prop('disabled', false);
+    }
+
+    //Переключение отображения панели расширенного поиска
+    function SwitchDisplayAdvanceSearchPanel() {
+        $('#leftExtendedPanel').stop();
+        var checked = $('#showAdvanceSearchToggle').prop('checked');
+        if (checked) {
+            $('#leftExtendedPanel').slideDown(300);
+        } else {
+            $('#leftExtendedPanel').slideUp(300);
+        }
+    }
+
+    //Поиск фильмов
+    function StarSearch() {
+        WaitLoading(true);
+        var query = $("#searchText").val();
+        var year = $("#year").val();
+        var sort = $("#sortingSelect").val();
+        var genreId = $("#genreSelect").val();
+        var vote = $("#voteSelect").val();
+        $("#resultContainer").html("");
+        $.ajax({
+            type: "POST",
+            url: "/RestAPI/StarSearch",
+            data: { query: query, year: year, sort: sort, genreId: genreId, vote: vote },
+            success: function (data) {
+                $(data).each(function () {
+                    var newCard = $("#templateCard").clone().prop("id","templateCard"+this.id);
+                    newCard.removeProp("id");
+                    newCard.find(".model_title").html(this.title);
+                    newCard.find(".model_overview").html(this.overview);
+                    newCard.find(".model_year").html(this.year);
+                    newCard.find(".model_overview").html(this.overview.slice(0, 120) + "..");
+                    newCard.find(".model_link_more").prop("href", "/restapi/Film/"+this.id); //TODO описать линку для просмотра информации о фильме
+                    newCard.find(".model_poster_path").prop("id", this.id);
+                    if (this.poster_path != "" && this.poster_path != null && this.poster_path != typeof (undefined)) {
+                        newCard.find(".model_poster_path").prop("src", "https://image.tmdb.org/t/p/w500" + this.poster_path);
+                    } else {
+                        newCard.find(".model_poster_path").prop("src", "/img/movie_dark8.png");
+                    }
+                    $("#resultContainer").append(newCard);
+                    Show(newCard);
+                });
+                WaitLoading(false);
+            }
+        });
+    }
+
+    //Получение списка жанров
+    function getGenresList() {
+        $.ajax({
+            type: "POST",
+            url: "/RestAPI/GetGenres",
+            data: "{data : testVal}",
+            success: function (data) {
+                $("#genreSelect").html(""); //clean select
+                $("#genreSelect").append($("<option></option>").attr("value", 0).text(""));
+                $(data).each(function () {
+                    $("#genreSelect").append($("<option></option>").attr("value", this.Id).text(this.Name));
+                });
+            }
+        });
+    }
+
+    function SetMessage(message, advancedMessage) {
+        $("#messageLabel").html(message);
+        $("#advancedMessageLabel").html(advancedMessage);
+    }
+
+    function ShowMessagePanel(show) {
+        if (IsUndefined(show)) show = true;
+        if (show) {
+            Show($("#messagePanel"));
+            Hide($("#resultContainer"));
+        } else {
+            Hide($("#messagePanel"));
+            Show($("#resultContainer"));
+        }
+    }
+
+    function HideMessagePanel() {
+        ShowMessagePanel(false);
+    }
+
+    function WaitLoading(bool) {
+        if (IsUndefined(bool)) bool = true;
+        if (bool) {
+            SetMessage("@Resources.Resource.AwaitingSearching");
+            ShowMessagePanel();
+
+        } else {
+            SetMessage();
+            HideMessagePanel();
+        }
+    }
+
+    function IsUndefined(obj) {
+        return (typeof obj === 'undefined');
+    }
+
+    function Hide(el) {
+        el.css("visibility","collapse");
+    }
+
+    function Show(el) {
+        el.css("visibility", "visible");
+    }
+</script>
+
+<style>
+    option, select {
+        text-transform: capitalize;
+    }
+</style>

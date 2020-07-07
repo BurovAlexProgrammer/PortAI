@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/themes/myBootstrap1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <style>
+        .nav-link {
+            font-size: large;
+        }
+    </style>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary box-shadow mb-3">
+            <div class="container">
+                <p class="float-left mb-0 h2" style="visibility:collapse">
+                    <environment include="Development">
+                        <span class="text-success">Develop</span> mode
+                    </environment>
+                    <environment exclude="Development">
+                        <span class="text-success">Release</span> mode
+                    </environment>
+                </p>
+                <a href="http://portai.ru/BurovAV" class="navbar-brand float-left" ><p class="mb-0 h2">Port<span class="text-success">AI</span></p></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item" id="navItemHome">
+                            <a href="http://portai.ru/BurovAV" class="nav-link text-light">@Resources.Resource.Home</a>
+                        </li>
+                        <li class="nav-item" id="navItemPortfolio">
+                            <a href="http://portai.ru/BurovAV/portfolio" class="nav-link text-light">@Resources.Resource.Portfolio</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    @{
+                        var languageService = new BurovavMvcPort.Services.LanguageService();
+                        var currentLanguage = languageService.GetCurrentLanguage(Context);
+                        var languageList = BurovavMvcPort.Services.LanguageService.Languages;
+                    }
+                    @Html.Hidden("currentLanguage", currentLanguage)
+                    @Html.DropDownList("languageSelect", new SelectList(languageList.Select(l => new { l.culture, l.title }), "culture", "title"), htmlAttributes: new { @class = "form-control", @onchange = "ChangeLanguage();" })
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - BurovavMvcPort - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var currentLanguage = $("#currentLanguage").val();
+            if (currentLanguage) {
+                SelectOptionByValue("currentLanguage",currentLanguage);
+            } else {
+                $("#currentLanguage").prop("selectedIndex", 0);
+            }
+        });
+
+        function ChangeLanguage() {
+            var newLanguage = $("#languageSelect").val();
+            $.ajax({
+                type: "POST",
+                url: "/App/SetLanguage/" + newLanguage,
+                success: function (data) {
+                    console.log("Ajax success. Data: " + data);
+                    location.reload();
+                },
+                error: function (jqXHR, exception) {
+                    console.log("Ajax error: Status=" + jqXHR.status + ", Exception='" + exception + "'");
+                }
+            });
+        }
+
+        function SelectOptionByValue(documentId, value) {
+            $("#languageSelect").val(value);
+        }
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

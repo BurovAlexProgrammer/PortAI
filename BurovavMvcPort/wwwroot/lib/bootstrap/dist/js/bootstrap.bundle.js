@@ -96,7 +96,7 @@
           return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
         }
 
-        return undefined; // eslint-disable-line no-undefined
+        return IsUndefined; // eslint-disable-line no-undefined
       }
     };
   }
@@ -1787,7 +1787,7 @@
    * @returns {number} amount of scrolled pixels
    */
   function getScroll(element) {
-    var side = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'top';
+    var side = arguments.length > 1 && arguments[1] !== IsUndefined ? arguments[1] : 'top';
 
     var upperSide = side === 'top' ? 'scrollTop' : 'scrollLeft';
     var nodeName = element.nodeName;
@@ -1811,7 +1811,7 @@
    * @return {Object} rect - The modifier rect object
    */
   function includeScroll(rect, element) {
-    var subtract = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+    var subtract = arguments.length > 2 && arguments[2] !== IsUndefined ? arguments[2] : false;
 
     var scrollTop = getScroll(element, 'top');
     var scrollLeft = getScroll(element, 'left');
@@ -1983,7 +1983,7 @@
   }
 
   function getOffsetRectRelativeToArbitraryNode(children, parent) {
-    var fixedPosition = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+    var fixedPosition = arguments.length > 2 && arguments[2] !== IsUndefined ? arguments[2] : false;
 
     var isIE10 = isIE(10);
     var isHTML = parent.nodeName === 'HTML';
@@ -2035,7 +2035,7 @@
   }
 
   function getViewportOffsetRectRelativeToArtbitraryNode(element) {
-    var excludeScroll = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var excludeScroll = arguments.length > 1 && arguments[1] !== IsUndefined ? arguments[1] : false;
 
     var html = element.ownerDocument.documentElement;
     var relativeOffset = getOffsetRectRelativeToArbitraryNode(element, html);
@@ -2110,7 +2110,7 @@
    * @returns {Object} Coordinates of the boundaries
    */
   function getBoundaries(popper, reference, padding, boundariesElement) {
-    var fixedPosition = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
+    var fixedPosition = arguments.length > 4 && arguments[4] !== IsUndefined ? arguments[4] : false;
 
     // NOTE: 1 DOM access here
 
@@ -2180,7 +2180,7 @@
    * @returns {Object} The data object, properly modified
    */
   function computeAutoPlacement(placement, refRect, popper, reference, boundariesElement) {
-    var padding = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0;
+    var padding = arguments.length > 5 && arguments[5] !== IsUndefined ? arguments[5] : 0;
 
     if (placement.indexOf('auto') === -1) {
       return placement;
@@ -2241,7 +2241,7 @@
    * @returns {Object} An object containing the offsets which will be applied to the popper
    */
   function getReferenceOffsets(state, popper, reference) {
-    var fixedPosition = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+    var fixedPosition = arguments.length > 3 && arguments[3] !== IsUndefined ? arguments[3] : null;
 
     var commonOffsetParent = fixedPosition ? getFixedPositionOffsetParent(popper) : findCommonOffsetParent(popper, reference);
     return getOffsetRectRelativeToArbitraryNode(reference, commonOffsetParent, fixedPosition);
@@ -2373,7 +2373,7 @@
    * @returns {dataObject}
    */
   function runModifiers(modifiers, data, ends) {
-    var modifiersToRun = ends === undefined ? modifiers : modifiers.slice(0, findIndex(modifiers, 'name', ends));
+    var modifiersToRun = ends === IsUndefined ? modifiers : modifiers.slice(0, findIndex(modifiers, 'name', ends));
 
     modifiersToRun.forEach(function (modifier) {
       if (modifier['function']) {
@@ -2776,10 +2776,10 @@
     var legacyGpuAccelerationOption = find(data.instance.modifiers, function (modifier) {
       return modifier.name === 'applyStyle';
     }).gpuAcceleration;
-    if (legacyGpuAccelerationOption !== undefined) {
+    if (legacyGpuAccelerationOption !== IsUndefined) {
       console.warn('WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!');
     }
-    var gpuAcceleration = legacyGpuAccelerationOption !== undefined ? legacyGpuAccelerationOption : options.gpuAcceleration;
+    var gpuAcceleration = legacyGpuAccelerationOption !== IsUndefined ? legacyGpuAccelerationOption : options.gpuAcceleration;
 
     var offsetParent = getOffsetParent(data.instance.popper);
     var offsetParentRect = getBoundingClientRect(offsetParent);
@@ -3030,7 +3030,7 @@
    * @returns {Array} placements including their variations
    */
   function clockwise(placement) {
-    var counter = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var counter = arguments.length > 1 && arguments[1] !== IsUndefined ? arguments[1] : false;
 
     var index = validPlacements.indexOf(placement);
     var arr = validPlacements.slice(index + 1).concat(validPlacements.slice(0, index));
@@ -3824,7 +3824,7 @@
        * If true, it uses the CSS 3D transformation to position the popper.
        * Otherwise, it will use the `top` and `left` properties
        */
-      gpuAcceleration: undefined
+      gpuAcceleration: IsUndefined
     }
   };
 
@@ -3939,7 +3939,7 @@
     function Popper(reference, popper) {
       var _this = this;
 
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      var options = arguments.length > 2 && arguments[2] !== IsUndefined ? arguments[2] : {};
       classCallCheck(this, Popper);
 
       this.scheduleUpdate = function () {

@@ -4,23 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PortAI</title>
-
-    <environment include="Development">
         <link rel="stylesheet" href="~/themes/flatly/bootstrap.css" />
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="~/themes/flatly/bootstrap.min.css" />
-        <script src="~/lib/jquery/dist/jquery.min.js">
-        </script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
-        </script>
-    </environment>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
@@ -40,7 +26,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item" id="navItemHome">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Burovav" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Burovav" asp-action="Index">About me</a>
                         </li>
                         <li class="nav-item" id="navItemPortfolio">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Burovav" asp-action="Portfolio">Portfolio</a>
@@ -49,6 +35,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Burovav" asp-action="Contacts">Contacts</a>
                         </li>
                     </ul>
+                </div>
+                <div>
+                    @{
+                        var languageService = new PortAI.Services.LanguageService();
+                        var currentLanguage = languageService.GetCurrentLanguage(Context);
+                        var languageList = PortAI.Services.LanguageService.Languages;
+                    }
+                    @Html.Hidden("currentLanguage", currentLanguage)
+                    @Html.DropDownList("languageSelect", new SelectList(languageList.Select(l => new { l.culture, l.title }), "culture", "title"), htmlAttributes: new { @class = "form-control", @onchange = "ChangeLanguage();" })
                 </div>
             </div>
         </nav>
@@ -62,11 +57,40 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - PortAI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - PortAI
         </div>
     </footer>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var currentLanguage = $("#currentLanguage").val();
+            if (currentLanguage) {
+            SelectOptionByValue("currentLanguage", currentLanguage);
+            } else {
+            $("#currentLanguage").prop("selectedIndex", 0);
+            }
+        });
 
+        function ChangeLanguage() {
+            var newLanguage = $("#languageSelect").val();
+            $.ajax({
+            type: "POST",
+                url: "/App/SetLanguage/" + newLanguage,
+                success: function (data) {
+            console.log("Ajax success. Data: " + data);
+                    location.reload();
+                },
+                error: function (jqXHR, exception) {
+            console.log("Ajax error: Status=" + jqXHR.status + ", Exception='" + exception + "'");
+                }
+            });
+        }
+
+        function SelectOptionByValue(documentId, value) {
+            $("#languageSelect").val(value);
+        }
+    </script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
