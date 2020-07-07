@@ -88,10 +88,8 @@
     <label class="ml-4 mr-4"> @ViewBag.Film.overview</label>
 </div>
 
-
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
-
-
     var genreData;
     $(document).ready(function () {
         //Получение списка жанров
@@ -111,7 +109,7 @@
 
     function GetGenre(genreId) {
         $(genreData).each(function () {
-            if (this.id == genreId) return this.name;
+            if (this.Id == genreId) return this.Name;
         });
         return "";
     }

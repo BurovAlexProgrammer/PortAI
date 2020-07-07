@@ -9,7 +9,6 @@ namespace BurovavMvcPort.Controllers
 {
     public class AppController : Controller
     {
-        //Уточнить, возможно есть класс для возвращения правильного кода выполнения запроса
         [Route("app/SetLanguage/{culture}")]
         public IActionResult SetLanguage(string culture)
         {

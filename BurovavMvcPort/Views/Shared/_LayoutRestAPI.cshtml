@@ -4,17 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-
-    <environment include="Development">
-        <link href="~/themes/myBootstrap1.css" rel="stylesheet" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
-    </environment>
+    <link href="~/themes/myBootstrap1.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
@@ -26,7 +16,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary box-shadow mb-3">
             <div class="container">
-                <p class="float-left mb-0 h2">
+                <p class="float-left mb-0 h2" style="visibility:collapse">
                     <environment include="Development">
                         <span class="text-success">Develop</span> mode
                     </environment>
@@ -34,7 +24,7 @@
                         <span class="text-success">Release</span> mode
                     </environment>
                 </p>
-                <a class="navbar-brand float-left " asp-area="" asp-controller="Home" asp-action="Index"><p class="mb-0 h2">Port<span class="text-success">AI</span></p></a>
+                <a href="http://portai.ru/BurovAV" class="navbar-brand float-left" ><p class="mb-0 h2">Port<span class="text-success">AI</span></p></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -42,10 +32,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item" id="navItemHome">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">@Resources.Resource.Home</a>
+                            <a href="http://portai.ru/BurovAV" class="nav-link text-light">@Resources.Resource.Home</a>
                         </li>
                         <li class="nav-item" id="navItemPortfolio">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Portfolio">@Resources.Resource.Portfolio</a>
+                            <a href="http://portai.ru/BurovAV/portfolio" class="nav-link text-light">@Resources.Resource.Portfolio</a>
                         </li>
                     </ul>
                 </div>
@@ -73,8 +63,7 @@
             &copy; 2020 - BurovavMvcPort - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     <script type="text/javascript">

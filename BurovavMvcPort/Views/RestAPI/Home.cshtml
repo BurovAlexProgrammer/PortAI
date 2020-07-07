@@ -93,6 +93,7 @@
     
 </div>
 
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         //Получение списка жанров
@@ -176,7 +177,7 @@
                 $("#genreSelect").html(""); //clean select
                 $("#genreSelect").append($("<option></option>").attr("value", 0).text(""));
                 $(data).each(function () {
-                    $("#genreSelect").append($("<option></option>").attr("value", this.id).text(this.name));
+                    $("#genreSelect").append($("<option></option>").attr("value", this.Id).text(this.Name));
                 });
             }
         });
@@ -232,9 +233,3 @@
         text-transform: capitalize;
     }
 </style>
-
-
-<script src="~/js/restApiHome.js">
-
-
-</script>
