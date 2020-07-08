@@ -163,6 +163,10 @@
     <value>Afficher le téléphone</value>
   </data>
   <data name="MyBiography" xml:space="preserve">
-    <value>Je m'appelle Aleksey. J'aime programmer et je me développe constamment dans cette direction. Mon attrait pour la programmation a commencé avec des cours d'informatique à l'école, puis je suis allé étudier à l'institut à la faculté d'informatique. &lt;br /&gt;</value>
+    <value>Je m'appelle Aleksey. J'aime programmer et je me développe constamment dans cette direction. Mon attrait pour la programmation a commencé avec des cours d'informatique à l'école, puis je suis allé étudier à l'institut à la faculté d'informatique. &lt;br /&gt;
+    Après ses études, il est retourné dans sa ville natale et a commencé à chercher du travail. Dans une petite ville, il est plus difficile de trouver un emploi, surtout en tant que programmeur. J'ai alors décidé de ne pas perdre de temps et je suis allé travailler comme ingénieur en électronique. Puisqu'il y avait assez de temps libre, j'ai évolué dans le sens de gamedev. À cette époque, je ne connaissais toujours pas l'existence de puissants moteurs de jeu, j'ai donc utilisé le célèbre Blitz3D plus tôt. Ce fut une expérience très utile et intéressante - je connaissais bien le travail de rendu, les images, l'écriture de mes effets physiques, les générateurs de particules et bien plus encore. &lt;br /&gt;
+    Ensuite, j'ai découvert l'existence de ce magnifique moteur comme Unity3d. Ses capacités m'ont étonné et travailler sur ce moteur est devenu mon rêve. &lt;br /&gt;
+    Mais dans ma ville, il n'y a qu'une seule grande organisation avec les spécialités d'un programmeur - Sibintek, et j'y travaille actuellement. Le travail est intéressant, nous accompagnons le portail d'entreprise, nous développons des formulaires personnalisés, des composants WebPart et des fonctionnalités supplémentaires où SharePoint ne fait pas face. Ici j'ai bien tiré C #, ASP Net, JS / jQuery, SQL. Développement complet d'une application client (C #, WPF, SQL). &lt;br /&gt;
+    Je prévois de développer davantage et envisage actuellement de déménager dans une autre ville.</value>
   </data>
 </root>

@@ -164,6 +164,10 @@
     <value>Visa telefon</value>
   </data>
   <data name="MyBiography" xml:space="preserve">
-    <value>Jag heter Aleksey. Jag gillar att programmera och utvecklas ständigt i denna riktning. Min attraktion för programmering började med datavetenskapslektioner i skolan, sedan gick jag för att studera vid institutet vid fakulteten för datavetenskap. &lt;br /&gt;</value>
+    <value>Jag heter Aleksey. Jag gillar att programmera och utvecklas ständigt i denna riktning. Min attraktion för programmering började med datavetenskapslektioner i skolan, sedan gick jag för att studera vid institutet vid fakulteten för datavetenskap. &lt;br /&gt;
+    Efter examen återvände han till sin hemstad och började leta efter arbete. I en liten stad är det svårare att hitta ett jobb, särskilt som programmerare. Då bestämde jag mig för att inte slösa bort tid och gick till jobbet som elektronisk ingenjör. Eftersom det fanns tillräckligt med ledig tid utvecklades jag i riktning mot gamedev. Vid den tiden visste jag fortfarande inte om förekomsten av kraftfulla spelmotorer, så jag använde den berömda Blitz3D tidigare. Det var en mycket användbar och intressant upplevelse - jag var välbevandrad i rendering, ramar, skrev mina fysiska effekter, partikelgeneratorer och mycket mer. &lt;br /&gt;
+    Sedan fick jag veta om förekomsten av denna magnifika motor som Unity3d. Hans kapacitet förvånade mig, och arbetet med denna motor blev min dröm. &lt;br /&gt;
+    Men i min stad finns det bara en stor organisation med specialiteterna från en programmerare - Sibintek, och jag arbetar för närvarande i den. Arbetet är intressant, vi följer med företagsportalen, vi utvecklar anpassade formulär, webbdelar och ytterligare funktionalitet där SharePoint inte klarar av. Här drog jag bra C #, ASP Net, JS / jQuery, SQL. Fullt utvecklad en klientapplikation (C #, WPF, SQL). &lt;br /&gt;
+    Jag planerar att vidareutveckla och överväger just nu att flytta till en annan stad.</value>
   </data>
 </root>

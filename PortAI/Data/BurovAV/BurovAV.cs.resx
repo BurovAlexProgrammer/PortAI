@@ -163,6 +163,10 @@
     <value>Telefon</value>
   </data>
   <data name="MyBiography" xml:space="preserve">
-    <value>Jmenuji se Aleksey. Rád programuji a neustále se vyvíjím tímto směrem. Moje přitažlivost k programování začala lekcemi informatiky ve škole, pak jsem šel studovat na ústav na fakultě informatiky. &lt;br /&gt;</value>
+    <value>Jmenuji se Aleksey. Rád programuji a neustále se vyvíjím tímto směrem. Moje přitažlivost k programování začala lekcemi informatiky ve škole, pak jsem šel studovat na ústav na fakultě informatiky. &lt;br /&gt;
+    Po promoci se vrátil do svého rodného města a začal hledat práci. V malém městě je těžší najít práci, zejména jako programátor. Pak jsem se rozhodl neztrácet čas a šel pracovat jako elektronický inženýr. Protože bylo dost volného času, vyvinul jsem se ve směru gamedeva. V té době jsem ještě nevěděl o existenci výkonných herních motorů, takže jsem dříve používal slavný Blitz3D. Byl to velmi užitečný a zajímavý zážitek - dobře jsem se orientoval v tvorbě vizualizací, rámečcích, psal mé fyzické efekty, generátory částic a mnohem více. &lt;br /&gt;
+    Pak jsem se dozvěděl o existenci tohoto velkolepého motoru jako Unity3d. Jeho schopnosti mě ohromily a práce na tomto motoru se stala mým snem. &lt;br /&gt;
+    Ale v mém městě existuje jen jedna velká organizace se specialitami programátora - Sibintek, a já v tom v současné době pracuji. Práce je zajímavá, provázíme firemní portál, vyvíjíme vlastní formuláře, webové části a další funkce, kde SharePoint nezvládne. Tady jsem dobře vytáhl C #, ASP Net, JS / jQuery, SQL. Plně vyvinutá klientská aplikace (C #, WPF, SQL). &lt;br /&gt;
+    Mám v plánu další rozvoj a v současné době uvažuji o přesunu do jiného města.</value>
   </data>
 </root>

@@ -163,6 +163,10 @@
     <value>Telefonnummer anzeigen</value>
   </data>
   <data name="MyBiography" xml:space="preserve">
-    <value>Ich heiße Aleksey. Ich programmiere gerne und entwickle mich ständig in diese Richtung. Meine Anziehungskraft für das Programmieren begann mit dem Informatikunterricht in der Schule, dann studierte ich am Institut der Fakultät für Informatik. &lt;br /&gt;</value>
+    <value>Ich heiße Aleksey. Ich programmiere gerne und entwickle mich ständig in diese Richtung. Meine Anziehungskraft für das Programmieren begann mit dem Informatikunterricht in der Schule, dann studierte ich am Institut der Fakultät für Informatik. &lt;br /&gt;
+    Nach seinem Abschluss kehrte er in seine Heimatstadt zurück und begann, Arbeit zu suchen. In einer kleinen Stadt ist es schwieriger, einen Job zu finden, insbesondere als Programmierer. Dann beschloss ich, keine Zeit zu verschwenden und arbeitete als Elektronikingenieur. Da es genügend Freizeit gab, entwickelte ich mich in Richtung Gamedev. Zu dieser Zeit wusste ich noch nichts über die Existenz leistungsfähiger Spiel-Engines, deshalb habe ich früher den berühmten Blitz3D verwendet. Es war eine sehr nützliche und interessante Erfahrung - ich war mit Rendering, Frames, meinen physikalischen Effekten, Partikelgeneratoren und vielem mehr vertraut. &lt;br /&gt;
+    Dann erfuhr ich von der Existenz dieses großartigen Motors wie Unity3d. Seine Fähigkeiten haben mich erstaunt und die Arbeit an diesem Motor wurde mein Traum. &lt;br /&gt;
+    Aber in meiner Stadt gibt es nur eine große Organisation mit den Spezialitäten eines Programmierers - Sibintek, und ich arbeite derzeit darin. Die Arbeit ist interessant, wir begleiten das Unternehmensportal, wir entwickeln benutzerdefinierte Formulare, Webparts und zusätzliche Funktionen, die SharePoint nicht bewältigt. Hier habe ich gut C #, ASP Net, JS / jQuery, SQL gezogen. Vollständig entwickelte Client-Anwendung (C #, WPF, SQL). &lt;br /&gt;
+    Ich plane mich weiterzuentwickeln und denke derzeit darüber nach, in eine andere Stadt zu ziehen.</value>
   </data>
 </root>

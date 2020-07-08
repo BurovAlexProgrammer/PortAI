@@ -163,6 +163,10 @@
     <value>Itsestäni</value>
   </data>
   <data name="MyBiography" xml:space="preserve">
-    <value>Nimeni on Aleksey. Pidän ohjelmoinnista ja kehitän jatkuvasti tähän suuntaan. Houkutteluni ohjelmointiin alkoi tietojenkäsittelytunneilla koulussa, sitten menin opiskelemaan laitokselle tietotekniikan tiedekunnassa. &lt;br /&gt;</value>
+    <value>Nimeni on Aleksey. Pidän ohjelmoinnista ja kehitän jatkuvasti tähän suuntaan. Houkutteluni ohjelmointiin alkoi tietojenkäsittelytunneilla koulussa, sitten menin opiskelemaan laitokselle tietotekniikan tiedekunnassa. &lt;br /&gt;
+    Valmistumisensa jälkeen hän palasi kotikaupunkiinsa ja alkoi etsiä työtä. Pienessä kaupungissa on vaikeampaa löytää työtä, etenkin ohjelmoijana. Sitten päätin olla tuhlamatta aikaa ja menin työskentelemään sähköinsinöörinä. Koska vapaa-aikaa oli tarpeeksi, kehittyin gamedev-suuntaan. Tuolloin en vielä tiennyt tehokkaiden pelimoottorien olemassaolosta, joten käytin kuuluisaa Blitz3D: tä aikaisemmin. Se oli erittäin hyödyllinen ja mielenkiintoinen kokemus - Olin hyvin perehtynyt hahmonnustyöhön, kehyksiin, kirjoittanut fyysiset vaikutukseni, hiukkasgeneraattorit ja paljon muuta. &lt;br /&gt;
+    Sitten sain selville tämän upean moottorin, kuten Unity3d, olemassaolosta. Hänen kykynsä hämmästyivät minusta, ja työskentely tällä moottorilla tuli unelmaksi. &lt;br /&gt;
+    Mutta kaupungissani on vain yksi suuri organisaatio, jolla on ohjelmoijan erikoisuuksia - Sibintek, ja työskentelen tällä hetkellä siinä. Työ on mielenkiintoista, seuraamme yritysportaalia, kehitämme räätälöityjä lomakkeita, web-osia ja lisätoimintoja, joissa SharePoint ei selviä. Täällä vetin hyvin C #, ASP Net, JS / jQuery, SQL. Kehittänyt täysin asiakassovelluksen (C #, WPF, SQL). &lt;br /&gt;
+    Aion kehittää edelleen ja harkitsen muuttoa toiseen kaupunkiin.</value>
   </data>
 </root>
