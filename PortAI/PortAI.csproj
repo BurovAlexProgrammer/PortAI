@@ -19,6 +19,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>BurovAV.resx</DependentUpon>
     </Compile>
+    <Compile Update="Data\Portai\PortAI.Designer.cs">
+      <DependentUpon>PortAI.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -61,6 +66,46 @@
       <CustomToolNamespace>Resources</CustomToolNamespace>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\Portai\PortAI.be.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\Portai\PortAI.cs.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\Portai\PortAI.de.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\Portai\PortAI.fi.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\Portai\PortAI.fr.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\Portai\PortAI.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>PortAI.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\Portai\PortAI.ru.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\Portai\PortAI.sv.resx">
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>BurovAV.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

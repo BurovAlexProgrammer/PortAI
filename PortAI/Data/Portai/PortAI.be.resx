@@ -117,63 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>About myself</value>
-  </data>
-  <data name="BurovAleksey" xml:space="preserve">
-    <value>Aleksey Burov</value>
-  </data>
   <data name="Contacts" xml:space="preserve">
-    <value>Contacts</value>
-  </data>
-  <data name="DownloadApp" xml:space="preserve">
-    <value>Download app</value>
-  </data>
-  <data name="GoToPage" xml:space="preserve">
-    <value>Go to the page</value>
+    <value>Кантакты</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Галоўная</value>
   </data>
   <data name="Mail" xml:space="preserve">
-    <value>Mail</value>
-  </data>
-  <data name="MyBiography" xml:space="preserve">
-    <value>My name is Aleksey. I like to program and I am constantly developing in this direction. My attraction to programming began with computer science lessons at school, then I went to study at the institute at the faculty of computer science. &lt;br /&gt;
-    After graduation, he returned to his hometown and began to look for work. In a small town, it’s harder to find a job, especially as a programmer. Then I decided not to waste time and went to work as an electronic engineer. Since there was enough free time, I developed in the direction of gamedev. At that time, I still did not know about the existence of powerful game engines, so I used the famous Blitz3D earlier. It was a very useful and interesting experience - I was well versed in the work of rendering, frames, wrote my physical effects, particle generators and much more. &lt;br /&gt;
-    Then I found out about the existence of this magnificent engine like Unity3d. His capabilities amazed me, and working on this engine became my dream. &lt;br /&gt;
-    But in my city there is only one large organization with the specialties of a programmer - Sibintek, and I currently work in it. The work is interesting, we accompany the corporate portal, we develop custom forms, web parts and additional functionality where SharePoint does not cope. Here I pulled well C #, ASP Net, JS / jQuery, SQL. Fully developed a client application (C #, WPF, SQL).&lt;br /&gt;
-    I plan to further develop and am currently considering moving to another city.</value>
-  </data>
-  <data name="MyProjectBlitzDemo1" xml:space="preserve">
-    <value>A good screensaver turned out at the time of studying the engine. Capturing a frame on Blitz3d is very stressful for the system, but modern PCs can do it. Most of all I remember the development of a calendar with the ability to turn over the months.</value>
-  </data>
-  <data name="MyProjectBlitzDemo2" xml:space="preserve">
-    <value>I decided to develop labyrinths when it was boring at work. I decided to entertain my colleagues, but it turned out to be the most fun for me when I realized that to quickly build maps on the console IDE, write your own editor)
-                It was an interesting experience and a good result.</value>
-  </data>
-  <data name="MyProjectBlitzDemo3" xml:space="preserve">
-    <value>This project appeared when I wanted to congratulate my girlfriend on a virtual postcard. I decided to generate free flowering flowers. Simulated the fall of the petals by the controller (manual particle generator). I liked to develop a system of stem and flower growth based on the principle of heritage and changing characteristics.</value>
-  </data>
-  <data name="MyProjectBlitzDemo4" xml:space="preserve">
-    <value>This is my last and largest development on the Blitz3D engine. Many interesting solutions were invented here, it is a pity that the engine is outdated. In this project, I developed a change of day and night, a system of plant growth and soil fertility, LOD from a distance, the use of shaders and much more.</value>
+    <value>Пошты</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>Тэлефон</value>
   </data>
   <data name="Portfolio" xml:space="preserve">
-    <value>Portfolio</value>
+    <value>Партфель</value>
+  </data>
+  <data name="HomeBody" xml:space="preserve">
+    <value>Вось партфоліо энтузіястаў распрацоўшчыкаў.</value>
+  </data>
+  <data name="HomeTitle" xml:space="preserve">
+    <value>Партфельны сайт</value>
   </data>
   <data name="Repo" xml:space="preserve">
-    <value>Repository</value>
-  </data>
-  <data name="RestAPIDemo1" xml:space="preserve">
-    <value>It became interesting for me to try RestAPI, I chose the topic - Search for films. Because it is clear. In this project, I used many technologies new to me, these were: middleware, bootstrap, localization (special thanks to the developers of the &lt;a href='https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager#review-details'&gt;plugin&lt;/a&gt;), multi-threaded downloading of a collection of films. I used tmdb api, it has a limitation (1 request contains a maximum of 30 films) the use of multithreading significantly reduced the download time.</value>
+    <value>Гэтая надбудова створыць новы дакумент у вашай папцы па змаўчанні ў бягучым воблачным рэпазіторыі.</value>
   </data>
   <data name="ShowMail" xml:space="preserve">
-    <value>Show mail</value>
+    <value>Паказаць лісты</value>
   </data>
   <data name="ShowPhone" xml:space="preserve">
-    <value>Show phone</value>
+    <value>Тэлефон</value>
+  </data>
+  <data name="AboutBody" xml:space="preserve">
+    <value>Мы не хочам марнаваць шмат часу на тэставыя заданні для працаўладкавання, каб даказаць свае навыкі. &lt;br/&gt; Мы хочам выдаткаваць свой час на партфель, каб даказаць свае навыкі. &lt;br/&gt; На нашым сайце кожны праграміст распрацоўвае свой партфель у сваім сховішчы на .Net Core 2.2 і публікуецца ў паддомене</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>О рэсурс</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Праекты</value>
+  </data>
+  <data name="InDeveloping" xml:space="preserve">
+    <value>У развіцці.</value>
   </data>
 </root>

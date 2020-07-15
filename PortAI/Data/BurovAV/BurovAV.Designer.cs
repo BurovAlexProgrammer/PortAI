@@ -189,6 +189,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Repository.
+        /// </summary>
+        public static string Repo {
+            get {
+                return ResourceManager.GetString("Repo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to It became interesting for me to try RestAPI, I chose the topic - Search for films. Because it is clear. In this project, I used many technologies new to me, these were: middleware, bootstrap, localization (special thanks to the developers of the &lt;a href=&apos;https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager#review-details&apos;&gt;plugin&lt;/a&gt;), multi-threaded downloading of a collection of films. I used tmdb api, it has a limitation (1 request contains a maximum of 30 films) the use of multithre [rest of string was truncated]&quot;;.
         /// </summary>
         public static string RestAPIDemo1 {

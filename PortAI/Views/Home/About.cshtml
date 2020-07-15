@@ -1,17 +1,15 @@
 ﻿@{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = @Resources.PortAI.About;
 }
 <h2>@ViewData["Title"]</h2>
 
 <p hidden>
-    Мы не хотим тратить много времени на тестовые задания для трудоустройства.
-    Лучше один раз потратить время на своё портфолио.
-    На нашем сайте каждый наш программист разрабатывает своё портфолио в своём репозитории на .Net Core 2.2 и публикуется на субдомене.
+    Мы не желаем тратить много времени на тестовые задания для трудоустройства, чтобы доказать свои навыки. <br/>
+    Мы желаем потратить свое время на портфолио, чтобы оно доказывало наши навыки. <br/>
+    На нашем сайте каждый программист разрабатывает своё портфолио в своём репозитории на .Net Core 2.2 и публикуется на субдомене.
 </p>
 <br/>
-<p>We do not want to spend a lot of time on test tasks for employment. </p>
-<p>It is better to spend time on your portfolio once. </p>
-<p>On our website, each programmer develops his portfolio in the .Net Core 2.2 repository and is published on a subdomain.</p>
+<p class="h5 text-left d-xl-inline">@Html.Raw(Resources.PortAI.AboutBody)</p>
 
 <script>
     $(function () {
